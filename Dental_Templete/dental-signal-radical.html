@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DENTAL / SIGNAL</title>
+<link rel="icon" type="image/png" href="../Img/Logo.png">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+:root{--paper:#e9e3d8;--ink:#171716;--red:#d94d3d;--line:#aaa69d;--white:#f8f6f0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Manrope,sans-serif;overflow-x:hidden}
+body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:100;background:linear-gradient(rgba(23,23,22,.025) 50%,transparent 50%);background-size:100% 4px;mix-blend-mode:multiply;opacity:.25}
+.cursor{position:fixed;z-index:200;width:20px;height:20px;border:1px solid var(--red);border-radius:50%;pointer-events:none;transform:translate(-50%,-50%);transition:width .25s,height .25s,background .25s;mix-blend-mode:multiply}
+.progress{position:fixed;z-index:90;left:0;top:0;width:3px;height:0;background:var(--red)}
+.side{position:fixed;z-index:80;left:20px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:12px}.side a{width:7px;height:7px;border:1px solid var(--ink);border-radius:50%;display:block}.side a.active{background:var(--red);border-color:var(--red);transform:scale(1.5)}
+.top{position:fixed;z-index:80;right:24px;top:20px;font:9px "DM Mono";letter-spacing:.14em}.top b{color:var(--red)}
+section{min-height:100svh;position:relative}
+.label{font:9px "DM Mono";letter-spacing:.15em;text-transform:uppercase;color:#66635d}.red{color:var(--red)}
+.hero{display:grid;grid-template-columns:55% 45%;overflow:hidden}
+.hero-left{padding:11vh 6vw 6vh 9vw;display:flex;flex-direction:column;justify-content:space-between;border-right:1px solid var(--line)}
+.hero-title{font-size:clamp(75px,12vw,175px);line-height:.76;letter-spacing:-.1em;margin:0}.hero-title .thin{font-weight:400}.hero-title .slash{color:var(--red);font-weight:400}.hero-sub{max-width:400px;font-size:13px;line-height:1.8;color:#625f58}.hero-meta{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;font:9px "DM Mono"}
+.hero-right{display:grid;place-items:center;overflow:hidden;background:#ddd5c7}
+.tooth-stage{width:min(75%,600px);aspect-ratio:1;position:relative;display:grid;place-items:center}.tooth-stage:before,.tooth-stage:after{content:"";position:absolute;border:1px solid var(--ink);border-radius:50%;inset:7%;animation:spin 22s linear infinite}.tooth-stage:after{inset:19%;border-style:dashed;animation-direction:reverse;animation-duration:14s}
+@keyframes spin{to{transform:rotate(360deg)}}
+.tooth{width:52%;height:63%;position:relative;z-index:2;filter:drop-shadow(15px 18px 0 rgba(23,23,22,.08));animation:float 4s ease-in-out infinite}@keyframes float{50%{transform:translateY(-10px) rotate(1deg)}}
+.tooth svg{width:100%;height:100%;overflow:visible}.orbit{position:absolute;right:5%;top:10%;font:9px "DM Mono";writing-mode:vertical-rl}.orbit b{color:var(--red)}
+.scrollmark{position:absolute;bottom:28px;right:30px;font:9px "DM Mono";writing-mode:vertical-rl;letter-spacing:.12em}
+.signal{background:var(--ink);color:var(--white);display:grid;grid-template-columns:30% 70%;padding:0 7vw}
+.signal-intro{padding:12vh 4vw 8vh 2vw;border-right:1px solid #444}.giant-no{font:130px "DM Mono";line-height:.8;color:var(--red);margin:30px 0}.signal-intro h2{font-size:clamp(40px,5vw,75px);line-height:.9;letter-spacing:-.07em;margin:0}.signal-main{padding:12vh 5vw}.signal-line{display:grid;grid-template-columns:90px 1fr;gap:20px;padding:32px 0;border-top:1px solid #444;align-items:start}.signal-line:last-child{border-bottom:1px solid #444}.signal-line .num{font:10px "DM Mono";color:#85837d}.signal-line h3{font-size:clamp(30px,4vw,56px);font-weight:500;letter-spacing:-.05em;margin:0}.signal-line p{font-size:11px;color:#a09d95;max-width:470px;line-height:1.7;margin:13px 0 0}
+.horizontal{background:#d9ddd6;overflow:hidden;padding:9vh 0}.h-head{padding:0 7vw;display:flex;justify-content:space-between;align-items:end}.h-head h2{font-size:clamp(55px,8vw,110px);line-height:.8;letter-spacing:-.09em;margin:18px 0 0}.track-wrap{margin-top:65px;width:max-content;display:flex;gap:18px;padding-left:7vw;transition:transform .08s linear}.care-card{width:370px;height:520px;background:var(--white);flex:none;position:relative;padding:25px;overflow:hidden}.care-card:nth-child(2){background:var(--red);color:white}.care-card:nth-child(3){background:var(--ink);color:white}.care-card:nth-child(4){background:#e8d7cb}.care-card .number{font:10px "DM Mono"}.care-card h3{position:absolute;left:25px;bottom:70px;font-size:43px;line-height:.9;letter-spacing:-.07em;margin:0;max-width:280px}.care-card p{position:absolute;left:25px;bottom:25px;font:10px "DM Mono";max-width:280px;line-height:1.5}.shape{position:absolute;width:220px;height:220px;border:1px solid currentColor;border-radius:50%;right:-60px;top:70px}.shape:after{content:"";position:absolute;inset:35px;border:1px dashed currentColor;border-radius:50%}
+.compare{background:var(--white);padding:11vh 7vw}.compare-head{display:flex;justify-content:space-between;align-items:end}.compare h2{font-size:clamp(55px,8vw,110px);line-height:.78;letter-spacing:-.09em;margin:18px 0}.compare-box{height:62vh;min-height:430px;margin-top:50px;position:relative;overflow:hidden;background:#c8c2b8;cursor:ew-resize}.compare-box img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1)}.compare-before{clip-path:inset(0 50% 0 0)}.compare-after{filter:none!important}.handle{position:absolute;top:0;bottom:0;left:50%;width:2px;background:var(--red);z-index:4}.handle span{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:var(--red);color:white;width:70px;height:70px;border-radius:50%;display:grid;place-items:center;font:9px "DM Mono";text-align:center}
+.floor{background:#d0d0ca;padding:11vh 7vw}.floor-grid{display:grid;grid-template-columns:1fr 1fr;gap:7vw;align-items:center}.floor h2{font-size:clamp(55px,7vw,100px);line-height:.8;letter-spacing:-.09em;margin:18px 0}.floor p{max-width:450px;color:#666860;line-height:1.8;font-size:12px}.map{height:600px;border:1px solid #7d7e78;position:relative;background:repeating-linear-gradient(0deg,transparent 0 48px,rgba(23,23,22,.1) 49px 50px),repeating-linear-gradient(90deg,transparent 0 48px,rgba(23,23,22,.1) 49px 50px)}.room{position:absolute;border:1px solid var(--ink);display:grid;place-items:center;font:9px "DM Mono";text-transform:uppercase}.r1{left:8%;top:10%;width:52%;height:32%}.r2{right:8%;top:10%;width:25%;height:32%;background:rgba(217,77,61,.14)}.r3{left:8%;bottom:10%;width:35%;height:32%}.r4{right:8%;bottom:10%;width:45%;height:32%}.pin{position:absolute;left:57%;top:47%;width:18px;height:18px;background:var(--red);border-radius:50%;box-shadow:0 0 0 12px rgba(217,77,61,.15)}
+.voice{background:var(--ink);color:white;padding:12vh 7vw}.voice-grid{display:grid;grid-template-columns:20% 80%;gap:5vw}.voice h2{font-size:clamp(60px,9vw,130px);line-height:.75;letter-spacing:-.1em;margin:0}.quote-list{display:grid;grid-template-columns:1fr 1fr;gap:14px}.quote{border:1px solid #41413d;padding:30px;min-height:280px;display:flex;flex-direction:column;justify-content:space-between}.quote:nth-child(2){margin-top:80px}.quote p{font:italic 26px/1.25 Georgia,serif;margin:0}.quote small{font:9px "DM Mono";color:#aaa69e}
+.contact{min-height:100svh;background:var(--red);color:white;padding:12vh 7vw;display:flex;flex-direction:column;justify-content:space-between}.contact h2{font-size:clamp(80px,14vw,210px);line-height:.7;letter-spacing:-.11em;margin:0;max-width:1100px}.contact h2 span{font-weight:400;font-style:italic;font-family:Georgia,serif}.contact-bottom{display:grid;grid-template-columns:1fr 1fr 1fr;gap:30px;border-top:1px solid rgba(255,255,255,.45);padding-top:18px;font:10px "DM Mono"}.contact-bottom a{text-decoration:underline;text-underline-offset:5px}
+footer{background:#111;color:#777;padding:20px 7vw;display:flex;justify-content:space-between;font:8px "DM Mono"}
+.reveal{opacity:0;transform:translateY(35px);filter:blur(7px)}
+@media(max-width:850px){.side{display:none}.hero{grid-template-columns:1fr}.hero-left{min-height:80svh;padding:120px 7vw 35px}.hero-right{min-height:75svh}.signal{grid-template-columns:1fr;padding:0 6vw}.signal-intro{border-right:0;border-bottom:1px solid #444;padding:80px 0 55px}.signal-main{padding:55px 0 80px}.horizontal{padding:80px 0}.h-head{display:block}.track-wrap{padding-left:6vw}.floor-grid,.voice-grid{grid-template-columns:1fr}.map{height:500px}.quote-list{margin-top:50px}.quote:nth-child(2){margin-top:0}.contact-bottom{grid-template-columns:1fr}}
+@media(max-width:520px){.hero-title{font-size:75px}.hero-right{min-height:65svh}.tooth-stage{width:90%}.signal-line{grid-template-columns:50px 1fr}.care-card{width:300px;height:430px}.care-card h3{font-size:35px}.compare-box{height:52vh}.floor{padding:80px 6vw}.map{height:420px}.contact h2{font-size:82px}.contact{padding:90px 6vw}footer{display:block}footer div+div{margin-top:9px}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important;filter:none!important}.tooth-stage:before,.tooth-stage:after,.tooth{animation:none}.ticker-track{animation:none}}
+</style>
+</head>
+<body>
+<div class="cursor"></div><div class="progress"></div>
+<div class="side"><a href="#home" class="active"></a><a href="#signal"></a><a href="#care"></a><a href="#compare"></a><a href="#space"></a><a href="#voice"></a><a href="#contact"></a></div>
+<div class="top">MONO+ <b>/ SIGNAL 07</b></div>
+
+<section id="home" class="hero">
+<div class="hero-left"><div><div class="label">MONO+ DENTAL / CHENNAI</div><h1 class="hero-title">YOUR<br><span class="thin">SMILE</span><br><span class="slash">/</span><br>YOUR<br><em>signal.</em></h1><p class="hero-sub">A different kind of dental practice. We look at the small details that change how your smile works, feels and reads.</p></div><div class="hero-meta"><span>01 — INTRO</span><span>SCROLL TO EXPLORE ↓</span></div></div>
+<div class="hero-right"><div class="tooth-stage"><div class="tooth"><svg viewBox="0 0 240 300" xmlns="http://www.w3.org/2000/svg"><path d="M54 55C36 38 49 13 75 18c20 4 30 15 45 15s25-11 45-15c26-5 39 20 21 37-12 12-15 31-17 55-2 24-2 52-14 74-8 15-20 18-30 7l-18-23-18 23c-10 11-22 8-30-7-12-22-12-50-14-74-2-24-5-43-17-55z" fill="#f8f6f0" stroke="#171716" stroke-width="5"/><path d="M71 72c12 10 22 13 49 13s37-3 49-13" fill="none" stroke="#d94d3d" stroke-width="5" stroke-linecap="round"/></svg></div><div class="orbit">CLINICAL <b>×</b> HUMAN</div></div><div class="scrollmark">SCROLL / 07</div></div>
+</section>
+
+<section id="signal" class="signal"><div class="signal-intro"><div class="label">02 / THE SIGNAL</div><div class="giant-no">02</div><h2>Small details.<br>Big <span class="red">difference.</span></h2></div><div class="signal-main">
+<div class="signal-line reveal"><div class="num">01</div><div><h3>See the problem.</h3><p>We use examination, imaging and conversation to understand what is really happening — not just what hurts today.</p></div></div>
+<div class="signal-line reveal"><div class="num">02</div><div><h3>Understand the options.</h3><p>You get a clear explanation, visual guidance and realistic choices before treatment begins.</p></div></div>
+<div class="signal-line reveal"><div class="num">03</div><div><h3>Choose the right move.</h3><p>Sometimes that means treatment. Sometimes it means watching and protecting what you already have.</p></div></div>
+</div></section>
+
+<section id="care" class="horizontal"><div class="h-head"><div><div class="label">03 / CARE SYSTEM</div><h2>Choose<br>your <i>route.</i></h2></div><div class="label">DRAG / SCROLL →</div></div><div class="track-wrap" id="track">
+<article class="care-card"><span class="number">ROUTE 01</span><div class="shape"></div><h3>KEEP IT<br>HEALTHY.</h3><p>CHECKUPS / HYGIENE / GUM CARE / PREVENTION</p></article>
+<article class="care-card"><span class="number">ROUTE 02</span><div class="shape"></div><h3>BRIGHTEN<br>THE SIGNAL.</h3><p>WHITENING / POLISHING / SUBTLE COSMETIC CARE</p></article>
+<article class="care-card"><span class="number">ROUTE 03</span><div class="shape"></div><h3>CHANGE<br>THE LINE.</h3><p>CLEAR ALIGNERS / BITE / SMILE ALIGNMENT</p></article>
+<article class="care-card"><span class="number">ROUTE 04</span><div class="shape"></div><h3>REBUILD<br>WITH CARE.</h3><p>FILLINGS / CROWNS / ROOT CANAL / IMPLANTS</p></article>
+</div></section>
+
+<section id="compare" class="compare"><div class="compare-head"><div><div class="label">04 / SEE THE DIFFERENCE</div><h2>BEFORE<br><i>↔</i> AFTER</h2></div><div class="label">DRAG THE RED HANDLE</div></div><div class="compare-box" id="compareBox"><img class="compare-after" src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1400&q=88"><img class="compare-before" src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1400&q=88"><div class="handle" id="handle"><span>DRAG<br>↔</span></div></div></section>
+
+<section id="space" class="floor"><div class="floor-grid"><div><div class="label">05 / THE STUDIO</div><h2>Not a waiting room.<br><i>A working space.</i></h2><p>Every part of the studio is arranged around the appointment: clear conversation, focused treatment and enough space to slow down when you need it.</p></div><div class="map"><div class="room r1">CONSULT</div><div class="room r2">X-RAY</div><div class="room r3">CARE 01</div><div class="room r4">CARE 02</div><div class="pin"></div></div></div></section>
+
+<section id="voice" class="voice"><div class="voice-grid"><div><div class="label">06 / SIGNALS FROM PATIENTS</div><h2>WE<br>HEAR<br>YOU.</h2></div><div class="quote-list"><article class="quote reveal"><p>“The best part was understanding exactly what I was paying for and why I needed it.”</p><small>ARJUN / RESTORATIVE CARE</small></article><article class="quote reveal"><p>“It felt more like a design studio than a clinic — in the best possible way.”</p><small>MEERA / SMILE CARE</small></article><article class="quote reveal"><p>“No pressure. No confusing words. Just a plan that made sense.”</p><small>VIKAS / PREVENTIVE CARE</small></article><article class="quote reveal"><p>“I finally stopped postponing my dental visits.”</p><small>PRIYA / ALIGNMENT</small></article></div></div></section>
+
+<section id="contact" class="contact"><div><div class="label" style="color:#fff">07 / MAKE THE SIGNAL</div><h2>READY TO<br><span>start?</span></h2></div><div class="contact-bottom"><div>MONO+ DENTAL<br>CHENNAI, TAMIL NADU</div><div><a href="tel:+919000000000">+91 90000 00000</a><br><a href="mailto:hello@monoplus.dental">hello@monoplus.dental</a></div><div><a href="https://maps.google.com/?q=Chennai+Tamil+Nadu">OPEN MAP ↗</a><br>MON — SAT / 09:00 — 20:00</div></div></section>
+<footer><div>MONO+ / DENTAL SIGNAL</div><div>© 2026 / CHENNAI</div></footer>
+
+<script>
+const cursor=document.querySelector('.cursor');
+addEventListener('pointermove',e=>{cursor.style.left=e.clientX+'px';cursor.style.top=e.clientY+'px'});
+document.querySelectorAll('a,.care-card,.compare-box').forEach(el=>{el.addEventListener('mouseenter',()=>{cursor.style.width='45px';cursor.style.height='45px';cursor.style.background='rgba(217,77,61,.15)'});el.addEventListener('mouseleave',()=>{cursor.style.width='20px';cursor.style.height='20px';cursor.style.background='transparent'})});
+
+const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+if(!reduce){
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.style.transition='opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1),filter .9s';e.target.style.opacity=1;e.target.style.transform='translateY(0)';e.target.style.filter='blur(0)';io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
+let p=0;
+function drag(x){const box=document.querySelector('#compareBox');const r=box.getBoundingClientRect();p=Math.max(0,Math.min(100,(x-r.left)/r.width*100));document.querySelector('.compare-before').style.clipPath=`inset(0 ${100-p}% 0 0)`;document.querySelector('#handle').style.left=p+'%'}
+const box=document.querySelector('#compareBox');let down=false;box.addEventListener('pointerdown',e=>{down=true;box.setPointerCapture(e.pointerId);drag(e.clientX)});box.addEventListener('pointermove',e=>{if(down)drag(e.clientX)});box.addEventListener('pointerup',()=>down=false);
+addEventListener('scroll',()=>{const max=document.body.scrollHeight-innerHeight;document.querySelector('.progress').style.height=(scrollY/max*100)+'%';const track=document.querySelector('#track');const section=document.querySelector('.horizontal');const r=section.getBoundingClientRect();const range=Math.max(0,track.scrollWidth-innerWidth+innerWidth*.14);const t=Math.max(0,Math.min(1,(innerHeight-r.top)/(innerHeight+section.offsetHeight*.35)));track.style.transform=`translateX(${-range*t}px)`}, {passive:true});
+}
+</script>
+</body>
+</html>

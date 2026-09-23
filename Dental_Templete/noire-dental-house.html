@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NOIRÉ — Dental House</title>
+<link rel="icon" type="image/png" href="../Img/Logo.png">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
+:root{--navy:#17213d;--lime:#d9ff3f;--paper:#f5f4ee;--gray:#747983;--line:#d8d8d0}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--navy);font-family:"DM Sans",sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.nav{position:fixed;z-index:20;top:0;left:0;width:100%;padding:24px 4vw;display:flex;justify-content:space-between;align-items:center;mix-blend-mode:multiply}
+.logo{font-size:24px;font-weight:700;letter-spacing:-.08em}
+.navlinks{display:flex;gap:8px}.navlinks a{font-size:12px;border:1px solid var(--navy);border-radius:99px;padding:10px 15px}.navlinks a:last-child{background:var(--lime)}
+.hero{min-height:100svh;display:grid;grid-template-columns:52% 48%}
+.hero-copy{padding:17vh 5vw 7vh;display:flex;flex-direction:column;justify-content:space-between}
+.kicker,.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.2em}
+.hero h1{font-family:"Playfair Display",serif;font-size:clamp(72px,11vw,175px);font-weight:500;line-height:.8;letter-spacing:-.08em}
+.hero h1 em{font-style:normal;color:var(--lime);-webkit-text-stroke:1px var(--navy)}
+.hero-note{display:flex;justify-content:space-between;gap:30px;max-width:550px;color:var(--gray);font-size:14px;line-height:1.55}.hero-note span:first-child{max-width:300px}
+.hero-image{position:relative;background:var(--navy);overflow:hidden}
+.hero-image img{width:100%;height:100%;object-fit:cover;filter:grayscale(1);mix-blend-mode:screen;opacity:.7}
+.hero-image:after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(217,255,63,.55),transparent 48%)}
+.badge{position:absolute;z-index:2;right:30px;bottom:30px;width:120px;height:120px;border-radius:50%;display:grid;place-items:center;text-align:center;background:var(--lime);font-size:11px;text-transform:uppercase;letter-spacing:.08em;transform:rotate(12deg)}
+.manifesto{min-height:100vh;padding:13vw 5vw;display:grid;grid-template-columns:20% 80%;border-top:1px solid var(--line)}
+.manifesto h2{font:500 clamp(50px,8vw,125px)/.9 "Playfair Display",serif;letter-spacing:-.07em;max-width:1100px}
+.manifesto h2 span{background:var(--lime);padding:0 .08em}
+.wipe{height:300vh;position:relative}
+.pin{position:sticky;top:0;height:100svh;overflow:hidden;background:var(--navy);color:var(--paper)}
+.track{height:100%;width:300%;display:flex;will-change:transform}
+.panel{position:relative;width:33.333%;height:100%;padding:12vh 5vw 7vh;display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:center}
+.panel:nth-child(2){background:var(--lime);color:var(--navy)}
+.panel:nth-child(3){background:var(--paper);color:var(--navy)}
+.panelno{position:absolute;top:28px;right:5vw;font-size:11px;letter-spacing:.15em}
+.panel h3{font:500 clamp(62px,9vw,140px)/.79 "Playfair Display",serif;letter-spacing:-.08em}
+.panel p{max-width:390px;margin-top:35px;font-size:15px;line-height:1.6;opacity:.7}
+.photo{height:68vh;overflow:hidden;border-radius:270px 270px 22px 22px}.photo img{width:100%;height:100%;object-fit:cover;filter:grayscale(1)}
+.panel:nth-child(2) .photo{border-radius:22px 270px 270px 22px}.panel:nth-child(3) .photo{border-radius:50%}
+.care{padding:130px 5vw}.carehead{display:flex;justify-content:space-between;align-items:end;border-bottom:1px solid var(--line);padding-bottom:30px}.care h2{font:500 clamp(65px,9vw,140px)/.8 "Playfair Display",serif;letter-spacing:-.08em}.carehead p{max-width:300px;color:var(--gray);font-size:13px;line-height:1.5}
+.row{min-height:125px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:9% 1fr 25% 5%;align-items:center;gap:20px;transition:.35s}.row:hover{background:var(--lime);padding:0 20px}.row small{font-size:11px}.row h3{font:500 clamp(28px,4vw,55px) "Playfair Display",serif;letter-spacing:-.04em}.row p{font-size:12px;color:var(--gray)}.row b{font-size:22px;font-weight:400}
+.contact{min-height:85vh;background:var(--lime);padding:100px 5vw 35px;display:flex;flex-direction:column;justify-content:space-between}.contact h2{font:500 clamp(80px,15vw,220px)/.75 "Playfair Display",serif;letter-spacing:-.1em}.contact-bottom{display:flex;justify-content:space-between;align-items:end;border-top:1px solid var(--navy);padding-top:20px;font-size:12px}.book{border:1px solid var(--navy);padding:13px 20px;border-radius:99px}
+@media(max-width:800px){
+.navlinks a:first-child{display:none}.hero{grid-template-columns:1fr}.hero-copy{min-height:65svh;padding-top:120px}.hero-image{min-height:55svh}.hero-note{display:block}.hero-note span{display:block;margin-top:18px}
+.manifesto{grid-template-columns:1fr;gap:30px}.panel{grid-template-columns:1fr;padding-top:95px}.photo{height:42vh;order:-1}
+.carehead{display:block}.carehead p{margin-top:25px}.row{grid-template-columns:12% 1fr 8%}.row p{display:none}.contact-bottom{display:block}.book{display:inline-block;margin-top:20px}
+}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<nav class="nav">
+<a class="logo" href="#">NOIRÉ.</a>
+<div class="navlinks"><a href="#care">Treatments</a><a href="#contact">Book</a></div>
+</nav>
+
+<section class="hero">
+<div class="hero-copy">
+<div class="kicker">Dental house / Chennai / 2026</div>
+<h1>MAKE<br>ROOM<br>FOR <em>JOY.</em></h1>
+<div class="hero-note"><span>A contemporary dental studio for people who want precision without the usual clinical feeling.</span><span>01<br>Quiet confidence.</span></div>
+</div>
+<div class="hero-image">
+<img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1400&q=85" alt="Dental care">
+<div class="badge">Smile<br>different<br>↘</div>
+</div>
+</section>
+
+<section class="manifesto">
+<div class="eyebrow">Our point of view</div>
+<h2>Good dentistry should disappear into your life. <span>Only the confidence remains.</span></h2>
+</section>
+
+<section class="wipe">
+<div class="pin"><div class="track" id="track">
+<article class="panel">
+<div><div class="panelno">01 / LISTEN</div><h3>START<br>WITH<br>YOU.</h3><p>No rushed chairside decisions. We map your concerns, habits and goals before we talk about treatment.</p></div>
+<div class="photo"><img src="https://images.unsplash.com/photo-1588776814546-daab30f310ce?auto=format&fit=crop&w=1100&q=85" alt="Dental consultation"></div>
+</article>
+<article class="panel">
+<div><div class="panelno">02 / SHAPE</div><h3>SMALL<br>MOVES.<br>BIG FEEL.</h3><p>From aligners to restorative work, every detail is planned to preserve what already makes your smile yours.</p></div>
+<div class="photo"><img src="https://images.unsplash.com/photo-1550831107-1553da8c8464?auto=format&fit=crop&w=1100&q=85" alt="Dental professional"></div>
+</article>
+<article class="panel">
+<div><div class="panelno">03 / LIVE</div><h3>BACK<br>TO<br>LIFE.</h3><p>The goal is never a “dental look”. It is simply feeling comfortable when you smile, speak and show up.</p></div>
+<div class="photo"><img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1100&q=85" alt="Patient smile"></div>
+</article>
+</div></div>
+</section>
+
+<section class="care" id="care">
+<div class="carehead"><h2>THE<br>EDIT.</h2><p>Selected treatments. Clear plans. No unnecessary complexity.</p></div>
+<div class="row"><small>01</small><h3>Clear aligners</h3><p>Digital planning · discreet movement</p><b>↗</b></div>
+<div class="row"><small>02</small><h3>Smile restoration</h3><p>Conservative · natural proportions</p><b>↗</b></div>
+<div class="row"><small>03</small><h3>Whitening</h3><p>Controlled · comfortable brightness</p><b>↗</b></div>
+<div class="row"><small>04</small><h3>Implant care</h3><p>Function · long-term planning</p><b>↗</b></div>
+</section>
+
+<section class="contact" id="contact">
+<div class="eyebrow">Your next visit</div>
+<h2>LET'S<br>SMILE.</h2>
+<div class="contact-bottom"><span>NOIRÉ DENTAL HOUSE · CHENNAI</span><a class="book" href="mailto:hello@noire.dental">Book a consultation ↗</a></div>
+</section>
+
+<script>
+const wipe=document.querySelector('.wipe'),track=document.querySelector('#track');
+function render(){
+ const r=wipe.getBoundingClientRect(),max=wipe.offsetHeight-innerHeight;
+ const p=Math.max(0,Math.min(1,-r.top/max));
+ track.style.transform=`translate3d(${-p*66.6666667}%,0,0)`;
+}
+addEventListener('scroll',render,{passive:true});addEventListener('resize',render);render();
+</script>
+</body>
+</html>

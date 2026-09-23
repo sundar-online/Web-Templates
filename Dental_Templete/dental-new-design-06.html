@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MONO — Dental Practice</title>
+<link rel="icon" type="image/png" href="../Img/Logo.png">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;1,500&display=swap');
+:root{--black:#171716;--cream:#e9e3d8;--white:#f8f6f0;--red:#d94d3d;--gray:#77756f}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--white);color:var(--black);font-family:Manrope,sans-serif;overflow-x:hidden}a{text-decoration:none;color:inherit}
+.topline{position:fixed;z-index:40;top:0;left:0;right:0;height:3px;background:var(--red)}
+header{position:fixed;z-index:30;top:3px;left:0;right:0;padding:18px 4vw;display:flex;justify-content:space-between;align-items:center;background:rgba(248,246,240,.78);backdrop-filter:blur(16px);border-bottom:1px solid rgba(23,23,22,.1)}
+.logo{font-weight:800;font-size:17px;letter-spacing:-.05em}.logo b{color:var(--red)}
+nav{display:flex;gap:28px;font:9px "DM Mono";text-transform:uppercase;letter-spacing:.12em}nav a:hover{color:var(--red)}
+.header-btn{border:1px solid var(--black);padding:9px 14px;border-radius:20px;font:9px "DM Mono";text-transform:uppercase}
+.hero{min-height:100svh;padding:120px 4vw 35px;background:var(--cream);position:relative;display:grid;grid-template-columns:1fr 1fr;gap:0;overflow:hidden}
+.hero-left{padding:4vw 3vw 3vw 4vw;display:flex;flex-direction:column;justify-content:center}
+.meta{font:9px "DM Mono";letter-spacing:.15em;text-transform:uppercase;color:var(--gray)}
+.hero h1{font:800 clamp(70px,10vw,150px)/.76 Manrope;letter-spacing:-.095em;margin:25px 0 30px}.hero h1 .outline{color:transparent;-webkit-text-stroke:1.5px var(--black)}.hero h1 em{font:500 .9em/1 "Playfair Display"}
+.hero-copy{max-width:420px;color:#68665f;font-size:13px;line-height:1.8}
+.hero-actions{display:flex;gap:10px;margin-top:28px}.button{padding:14px 18px;background:var(--black);color:white;font:9px "DM Mono";text-transform:uppercase}.button.alt{background:transparent;color:var(--black);border:1px solid #99958c}
+.hero-right{position:relative;display:flex;align-items:center;justify-content:center;padding:35px}
+.hero-frame{width:min(500px,90%);height:78vh;position:relative}
+.hero-frame:before{content:"";position:absolute;inset:-13px 13px 13px -13px;border:1px solid var(--black)}
+.hero-frame img{width:100%;height:100%;object-fit:cover;position:relative;z-index:2;filter:saturate(.65)}
+.hero-label{position:absolute;z-index:4;bottom:18px;left:-35px;background:var(--red);color:white;padding:16px 18px;font:9px "DM Mono";line-height:1.5}
+.hero-number{position:absolute;right:0;top:20px;font:90px "DM Mono";color:rgba(23,23,22,.08)}
+.ticker{height:44px;background:var(--black);color:white;display:flex;align-items:center;overflow:hidden;white-space:nowrap}.ticker-track{font:10px "DM Mono";letter-spacing:.16em;animation:ticker 18s linear infinite}@keyframes ticker{to{transform:translateX(-50%)}}
+.section{padding:125px 7vw}.split{display:grid;grid-template-columns:220px 1fr;gap:8vw}.index{font:9px "DM Mono";color:var(--gray);letter-spacing:.15em}.statement{font:500 clamp(48px,6.2vw,88px)/.93 Manrope;letter-spacing:-.075em;margin:0;max-width:1000px}.statement em{font-family:"Playfair Display";font-weight:500}.description{max-width:520px;margin-top:38px;color:var(--gray);font-size:13px;line-height:1.9}
+.features{background:var(--white)}.feature-layout{display:grid;grid-template-columns:1fr 1fr;gap:70px;margin-top:75px}.feature-image{height:620px;overflow:hidden;position:relative}.feature-image img{width:100%;height:100%;object-fit:cover;filter:saturate(.65);transition:1s}.feature-image:hover img{transform:scale(1.04)}.feature-tag{position:absolute;top:20px;left:20px;background:var(--white);padding:8px 11px;font:8px "DM Mono";z-index:2}
+.feature-list{border-top:1px solid #c9c5bc}.feature{display:grid;grid-template-columns:45px 1fr 25px;gap:18px;padding:28px 0;border-bottom:1px solid #c9c5bc;transition:.3s}.feature:hover{padding-left:18px}.feature-num{font:9px "DM Mono";color:var(--red)}.feature h3{font-size:24px;margin:0;letter-spacing:-.04em}.feature p{color:var(--gray);font-size:11px;line-height:1.6;margin:8px 0 0;max-width:400px}
+.timeline{background:var(--black);color:white}.timeline .index{color:#9b9991}.timeline-list{margin-top:65px}.time{display:grid;grid-template-columns:110px 1fr;min-height:145px;border-top:1px solid #44433f;padding:30px 0}.time:last-child{border-bottom:1px solid #44433f}.time-number{font:38px "DM Mono";color:var(--red)}.time h3{font:500 30px "Manrope";margin:0}.time p{max-width:470px;color:#a9a69d;font-size:11px;line-height:1.7;margin:10px 0}
+.collage{background:#d9ddd6}.collage-grid{display:grid;grid-template-columns:.8fr 1.2fr .7fr;gap:12px;margin-top:60px;align-items:start}.collage-grid .photo{overflow:hidden}.collage-grid img{width:100%;height:100%;object-fit:cover;transition:.8s;filter:saturate(.65)}.collage-grid .photo:hover img{transform:scale(1.05)}.p1{height:420px}.p2{height:620px}.p3{height:330px;margin-top:130px}.caption{font:8px "DM Mono";margin-top:9px;color:#666962;letter-spacing:.12em;text-transform:uppercase}
+.review{background:var(--cream)}.review-box{margin-top:60px;background:var(--red);color:white;padding:55px 7vw;position:relative;overflow:hidden}.review-box:after{content:"“";position:absolute;font:280px "Playfair Display";right:3%;top:-100px;color:rgba(255,255,255,.12)}blockquote{font:500 clamp(35px,4.4vw,65px)/1.05 "Playfair Display";max-width:1000px;margin:0;position:relative;z-index:2}cite{display:block;margin-top:28px;font:9px "DM Mono";font-style:normal;letter-spacing:.14em;position:relative;z-index:2}
+.contact{background:var(--white)}.contact-layout{display:grid;grid-template-columns:1fr .8fr;gap:10vw}.contact-title{font:800 clamp(65px,9vw,130px)/.8 Manrope;letter-spacing:-.09em;margin:20px 0}.contact-title em{font:500 .9em "Playfair Display"}.contact-info{border-top:1px solid #c9c5bc}.detail{padding:22px 0;border-bottom:1px solid #c9c5bc}.detail label{font:9px "DM Mono";color:var(--gray);letter-spacing:.15em}.detail p,.detail a{display:block;font-size:13px;line-height:1.6;margin:7px 0}.social{display:flex;gap:8px;margin-top:25px}.social a{border:1px solid #aaa69d;padding:9px 13px;border-radius:20px;font:8px "DM Mono"}
+footer{background:var(--black);color:#8f8d86;padding:25px 7vw;display:flex;justify-content:space-between;font:8px "DM Mono";letter-spacing:.08em}
+.reveal{opacity:0;transform:translateY(38px);filter:blur(8px)}.hero-left>*{opacity:0;transform:translateY(25px)}
+@media(max-width:850px){nav{display:none}.hero{grid-template-columns:1fr;padding-top:105px}.hero-right{min-height:560px}.hero-frame{height:520px}.split,.feature-layout,.contact-layout{grid-template-columns:1fr}.collage-grid{grid-template-columns:1fr 1fr}.p2{height:500px}.p1{height:330px}.p3{height:280px;margin-top:70px}.section{padding:90px 6vw}}
+@media(max-width:520px){.hero h1{font-size:70px}.hero-right{padding:25px 10px}.hero-frame{width:90%;height:440px}.hero-label{left:-8px}.feature-image{height:430px}.feature h3{font-size:20px}.time{grid-template-columns:75px 1fr}.time-number{font-size:25px}.collage-grid{grid-template-columns:1fr}.p1,.p2,.p3{height:370px;margin-top:0}.contact-title{font-size:70px}footer{display:block}footer div+div{margin-top:10px}}
+@media(prefers-reduced-motion:reduce){.ticker-track{animation:none}.reveal,.hero-left>*{opacity:1!important;transform:none!important;filter:none!important}}
+</style>
+</head>
+<body>
+<div class="topline"></div>
+<header><a class="logo" href="#">MONO<b>+</b></a><nav><a href="#philosophy">Philosophy</a><a href="#care">Care</a><a href="#journey">Journey</a><a href="#space">Space</a><a href="#contact">Visit</a></nav><a class="header-btn" href="#contact">Book now</a></header>
+
+<section class="hero">
+<div class="hero-left"><div class="meta">PRIVATE DENTAL PRACTICE / CHENNAI</div><h1>Less<br><span class="outline">noise.</span><br>More<br><em>care.</em></h1><p class="hero-copy">A focused dental practice for people who prefer thoughtful conversations, precise treatment and a calmer way to look after their smile.</p><div class="hero-actions"><a class="button" href="#contact">Book a visit ↗</a><a class="button alt" href="#care">Explore care</a></div></div>
+<div class="hero-right"><div class="hero-number">01</div><div class="hero-frame"><img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1200&q=88" alt="Dental treatment"><div class="hero-label">MONO+<br>PRECISION / COMFORT</div></div></div>
+</section>
+
+<div class="ticker"><div class="ticker-track">PREVENTION · RESTORATION · ALIGNMENT · SMILE DESIGN · PREVENTION · RESTORATION · ALIGNMENT · SMILE DESIGN · </div></div>
+
+<section id="philosophy" class="section"><div class="split"><div class="index">02 / PHILOSOPHY</div><div><h2 class="statement reveal">We believe dental care should feel <em>considered,</em> not complicated.</h2><p class="description reveal">Every appointment starts with listening. We explain what we see, show you your options and only recommend treatment that genuinely serves your long-term health and confidence.</p></div></div></section>
+
+<section id="care" class="section features"><div class="split"><div class="index">03 / CARE</div><div><h2 class="statement reveal">One practice.<br><em>Many ways</em> to care.</h2></div></div><div class="feature-layout"><div class="feature-image reveal"><span class="feature-tag">CLINICAL CARE / 02</span><img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1000&q=85" alt="Dentist care"></div><div class="feature-list">
+<div class="feature reveal"><span class="feature-num">01</span><div><h3>Healthy Foundations</h3><p>Examinations, cleaning, gum care and prevention to keep your mouth healthy.</p></div><span>↗</span></div>
+<div class="feature reveal"><span class="feature-num">02</span><div><h3>Natural Smile Design</h3><p>Whitening and cosmetic treatment designed to look like you, only refreshed.</p></div><span>↗</span></div>
+<div class="feature reveal"><span class="feature-num">03</span><div><h3>Confident Alignment</h3><p>Clear aligners with a digital plan built around your everyday routine.</p></div><span>↗</span></div>
+<div class="feature reveal"><span class="feature-num">04</span><div><h3>Restorative Dentistry</h3><p>Crowns, fillings, root canal care and implants focused on function first.</p></div><span>↗</span></div>
+</div></div></section>
+
+<section id="journey" class="section timeline"><div class="split"><div class="index">04 / YOUR JOURNEY</div><div><h2 class="statement reveal">From first hello<br>to <em>feeling good.</em></h2></div></div><div class="timeline-list">
+<div class="time reveal"><div class="time-number">01</div><div><h3>Tell us what matters.</h3><p>We begin with your concerns, goals and questions. No assumptions, no pressure.</p></div></div>
+<div class="time reveal"><div class="time-number">02</div><div><h3>See the bigger picture.</h3><p>A clear examination and simple explanation of what is happening and why.</p></div></div>
+<div class="time reveal"><div class="time-number">03</div><div><h3>Choose your next step.</h3><p>We build a practical plan together, from a simple clean to comprehensive treatment.</p></div></div>
+<div class="time reveal"><div class="time-number">04</div><div><h3>Leave with clarity.</h3><p>Comfortable care, useful aftercare and a team you can return to.</p></div></div>
+</div></section>
+
+<section id="space" class="section collage"><div class="split"><div class="index">05 / THE SPACE</div><div><h2 class="statement reveal">A quieter room for <em>better care.</em></h2></div></div><div class="collage-grid"><div><div class="photo p1"><img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=85"></div><div class="caption">Consultation / 01</div></div><div><div class="photo p2"><img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1000&q=85"></div><div class="caption">Treatment / 02</div></div><div><div class="photo p3"><img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=800&q=85"></div><div class="caption">Details / 03</div></div></div></section>
+
+<section class="section review"><div class="split"><div class="index">06 / PATIENT NOTE</div><div><h2 class="statement reveal">The best compliment is when someone says they were <em>comfortable.</em></h2></div></div><div class="review-box reveal"><blockquote>“The whole experience was simple. I knew what was happening, why it was happening and I never felt rushed.”</blockquote><cite>PRIYA M. / SMILE RESTORATION</cite></div></section>
+
+<section id="contact" class="section contact"><div><div class="index">07 / CONTACT</div><h2 class="contact-title reveal">Let's talk<br>about your<br><em>smile.</em></h2><a class="button" href="tel:+919000000000">Call the studio ↗</a></div><div class="contact-info reveal"><div class="detail"><label>STUDIO</label><p>MONO+ Dental Practice<br>Chennai, Tamil Nadu</p><a href="https://maps.google.com/?q=Chennai+Tamil+Nadu">Get directions ↗</a></div><div class="detail"><label>PHONE</label><a href="tel:+919000000000">+91 90000 00000</a></div><div class="detail"><label>EMAIL</label><a href="mailto:hello@monoplus.dental">hello@monoplus.dental</a></div><div class="detail"><label>OPEN</label><p>Monday — Saturday / 09:00 — 20:00</p></div><div class="social"><a href="https://instagram.com">Instagram</a><a href="https://facebook.com">Facebook</a></div></div></section>
+
+<footer><div>MONO+ / DENTAL PRACTICE</div><div>© 2026 / CHENNAI / ALL RIGHTS RESERVED</div></footer>
+
+<script>
+const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+if(!reduce){
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.style.transition='opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1),filter 1s';e.target.style.opacity=1;e.target.style.transform='translateY(0)';e.target.style.filter='blur(0)';io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
+document.querySelectorAll('.hero-left>*').forEach((e,i)=>setTimeout(()=>{e.style.transition='opacity .8s,transform .8s cubic-bezier(.2,.7,.2,1)';e.style.opacity=1;e.style.transform='translateY(0)'},160+i*120));
+addEventListener('scroll',()=>{const y=scrollY;document.querySelector('.hero-frame').style.transform=`translateY(${Math.min(y*.035,30)}px)`},{passive:true});
+}
+</script>
+</body>
+</html>

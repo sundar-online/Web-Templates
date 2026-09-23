@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SmileCare — Dental Clinic</title>
+<link rel="icon" type="image/png" href="../Img/Logo.png">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;1,500&display=swap');
+:root{--ink:#17343c;--soft:#edf8f8;--cyan:#b9e8e8;--muted:#718186;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f9fcfc;color:var(--ink);font-family:"DM Sans",sans-serif;overflow-x:hidden}
+a{text-decoration:none;color:inherit}button{font:inherit;border:0;background:none}
+.nav{position:fixed;top:18px;left:4%;right:4%;z-index:20;height:64px;padding:0 22px;display:flex;align-items:center;justify-content:space-between;border:1px solid rgba(255,255,255,.6);background:rgba(255,255,255,.34);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-radius:18px;box-shadow:0 10px 40px rgba(24,70,76,.08)}
+.logo{font-weight:800;letter-spacing:.12em;font-size:13px;display:flex;gap:9px;align-items:center}.logo i{font-family:"Playfair Display";font-size:23px;font-style:italic}
+.navlinks{display:flex;gap:28px;font-size:12px;font-weight:600}.navlinks a{opacity:.7}.navlinks a:hover{opacity:1}.book{padding:11px 18px;border-radius:30px;background:var(--ink);color:white;font-size:11px;font-weight:700}
+.hero{min-height:100svh;position:relative;display:flex;align-items:center;padding:130px 8% 80px;overflow:hidden;background:linear-gradient(135deg,#f8ffff,#dff5f4)}
+.blob{position:absolute;border-radius:50%;filter:blur(4px);opacity:.55}.b1{width:420px;height:420px;background:#bce9e7;right:-120px;top:80px}.b2{width:260px;height:260px;background:#d9e7ff;left:-80px;bottom:30px}
+.hero-grid{position:relative;z-index:2;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:7vw;align-items:center}
+.kicker{font-size:10px;letter-spacing:.2em;font-weight:700;color:#759095}.hero h1{font-size:clamp(55px,7vw,100px);line-height:.94;letter-spacing:-.06em;margin:20px 0}.serif{font-family:"Playfair Display",serif;font-style:italic;font-weight:500}.hero p{max-width:490px;color:var(--muted);line-height:1.8;font-size:15px}.actions{display:flex;gap:16px;align-items:center;margin-top:30px}.primary{background:var(--ink);color:#fff;padding:16px 22px;border-radius:40px;font-size:12px;font-weight:700}.secondary{font-size:12px;font-weight:700;padding:14px}
+.hero-photo{height:650px;border-radius:35px;overflow:hidden;position:relative;box-shadow:0 30px 80px rgba(35,80,86,.15);transform:rotate(2deg)}.hero-photo img{width:100%;height:100%;object-fit:cover}.hero-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(8,35,41,.2))}
+.float-card{position:absolute;z-index:3;left:-35px;bottom:50px;background:rgba(255,255,255,.65);backdrop-filter:blur(18px);padding:18px 22px;border-radius:16px;border:1px solid rgba(255,255,255,.8);box-shadow:0 15px 45px rgba(20,60,66,.13)}.float-card strong{font-size:22px;display:block}.float-card span{font-size:9px;color:var(--muted)}
+.section{padding:120px 8%}.label{font-size:10px;letter-spacing:.2em;color:#7a8d91;font-weight:700}.title{font-size:clamp(45px,5.5vw,76px);line-height:1;letter-spacing:-.05em;margin:18px 0 55px}.about{display:grid;grid-template-columns:1fr 1fr;gap:8vw;align-items:center}.about-img{height:520px;border-radius:25px;overflow:hidden}.about-img img{width:100%;height:100%;object-fit:cover}.about p{color:var(--muted);line-height:1.9;max-width:500px}.numbers{display:flex;gap:35px;margin-top:40px}.numbers strong{font-size:30px;display:block}.numbers small{font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+.treatments{background:var(--soft)}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.9);border-radius:22px;padding:10px;backdrop-filter:blur(15px);transition:.4s}.card:hover{transform:translateY(-8px);box-shadow:0 25px 60px rgba(20,70,76,.1)}.card img{width:100%;height:220px;object-fit:cover;border-radius:17px}.card-content{padding:18px}.card-content small{color:#7a8d91}.card h3{margin:10px 0 7px;font-size:19px}.card p{font-size:12px;color:var(--muted);line-height:1.6;margin:0}
+.work{background:#12323a;color:white}.work .label{color:#a7c4c8}.work-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:15px}.work-img{height:460px;border-radius:20px;overflow:hidden}.work-img:first-child{height:560px}.work-img img{width:100%;height:100%;object-fit:cover;transition:.8s}.work-img:hover img{transform:scale(1.06)}
+.reviews-head{display:flex;justify-content:space-between;align-items:end}.rating{font-size:11px;color:#76888c}.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.review{padding:35px;background:rgba(237,248,248,.7);border:1px solid rgba(255,255,255,.9);border-radius:22px}.stars{letter-spacing:4px;color:#5c9da5}.review blockquote{font-family:"Playfair Display";font-size:22px;line-height:1.45;margin:25px 0}.review small{color:var(--muted)}
+.contact{background:linear-gradient(135deg,#dff5f4,#f8ffff)}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:10vw}.contact h2{font-size:clamp(50px,6vw,85px);line-height:.96;margin:18px 0}.contact p{color:var(--muted);line-height:1.8}.details{border-top:1px solid rgba(23,52,60,.15)}.detail{padding:22px 0;border-bottom:1px solid rgba(23,52,60,.15)}.detail small{font-size:9px;letter-spacing:.17em;color:#7a8d91}.detail p,.detail a{font-size:14px;color:var(--ink);margin:8px 0}
+footer{padding:55px 8% 25px;background:#0d2930;color:#dbe9ea}.footer{display:flex;justify-content:space-between;gap:40px;padding-bottom:50px}.footer p{color:#8ea5aa;font-size:12px;line-height:1.7}.copy{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;color:#789197;font-size:9px}
+.chat{position:fixed;right:24px;bottom:24px;width:58px;height:58px;border-radius:50%;z-index:30;background:var(--ink);color:white;font-size:22px;box-shadow:0 15px 35px rgba(8,35,41,.2);cursor:pointer}.chatbox{position:fixed;right:24px;bottom:95px;width:330px;z-index:29;background:rgba(255,255,255,.78);backdrop-filter:blur(22px);border:1px solid rgba(255,255,255,.8);border-radius:20px;box-shadow:0 25px 70px rgba(10,45,52,.18);padding:20px;opacity:0;pointer-events:none;transform:translateY(15px);transition:.3s}.chatbox.open{opacity:1;pointer-events:auto;transform:none}.chatbox h4{margin:0 0 4px}.chatbox p{font-size:12px;color:var(--muted);line-height:1.6}.quick{display:grid;gap:8px}.quick a{padding:11px;background:#edf8f8;border-radius:10px;font-size:11px;font-weight:600}
+.reveal{opacity:0;transform:translateY(40px);filter:blur(8px)}.hero-text>*{opacity:0;transform:translateY(30px)}
+@media(max-width:850px){.navlinks{display:none}.hero-grid,.about,.contact-grid{grid-template-columns:1fr}.hero-photo{height:500px;margin-top:20px}.float-card{left:15px}.cards{grid-template-columns:1fr 1fr}.work-grid{grid-template-columns:1fr 1fr}.work-img:first-child{height:500px;grid-column:span 2}.reviews{grid-template-columns:1fr}.section{padding:90px 6%}.nav{left:3%;right:3%}}
+@media(max-width:560px){.hero{padding:120px 6% 60px}.hero h1{font-size:56px}.hero-photo{height:420px}.cards,.work-grid{grid-template-columns:1fr}.work-img:first-child{grid-column:auto;height:400px}.work-img{height:350px}.numbers{gap:18px}.numbers strong{font-size:23px}.footer{display:block}.chatbox{right:12px;width:calc(100% - 24px)}.chat{right:16px;bottom:16px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}.reveal,.hero-text>*{opacity:1!important;transform:none!important;filter:none!important}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="logo" href="#"><i>S</i> SMILECARE</a>
+  <div class="navlinks"><a href="#about">About</a><a href="#treatments">Treatments</a><a href="#work">Our Work</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a></div>
+  <a class="book" href="#contact">Book Appointment ↗</a>
+</nav>
+
+<section class="hero">
+  <div class="blob b1"></div><div class="blob b2"></div>
+  <div class="hero-grid">
+    <div class="hero-text">
+      <div class="kicker">MODERN DENTISTRY · PERSONAL CARE</div>
+      <h1>Your Smile.<br><span class="serif">Our Expertise.</span></h1>
+      <p>Premium dental care designed around your comfort, confidence and long-term oral health.</p>
+      <div class="actions"><a class="primary" href="#contact">Book an Appointment ↗</a><a class="secondary" href="#treatments">Explore Treatments ↓</a></div>
+    </div>
+    <div class="hero-photo"><img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1200&q=85" alt="Modern dental care"></div>
+  </div>
+  <div class="float-card"><strong>4.9 ★</strong><span>5000+ HAPPY PATIENTS</span></div>
+</section>
+
+<section id="about" class="section">
+  <div class="about">
+    <div class="about-img reveal"><img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1000&q=85" alt="Dentist consultation"></div>
+    <div class="reveal"><div class="label">01 / ABOUT US</div><h2 class="title">Care that feels <span class="serif">different.</span></h2><p>We combine modern dental technology with thoughtful, patient-first care. Every appointment is designed to feel calm, clear and comfortable.</p><div class="numbers"><div><strong>10+</strong><small>Years</small></div><div><strong>5K+</strong><small>Patients</small></div><div><strong>15+</strong><small>Treatments</small></div></div></div>
+  </div>
+</section>
+
+<section id="treatments" class="section treatments">
+  <div class="label">02 / TREATMENTS</div><h2 class="title">Complete Dental <span class="serif">Care.</span></h2>
+  <div class="cards">
+    <article class="card reveal"><img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=700&q=80"><div class="card-content"><small>01</small><h3>General Dentistry</h3><p>Checkups, cleaning and preventive care.</p></div></article>
+    <article class="card reveal"><img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=700&q=80"><div class="card-content"><small>02</small><h3>Teeth Cleaning</h3><p>Professional care for healthier teeth and gums.</p></div></article>
+    <article class="card reveal"><img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=700&q=80"><div class="card-content"><small>03</small><h3>Dental Implants</h3><p>Natural-looking solutions for missing teeth.</p></div></article>
+    <article class="card reveal"><img src="https://images.unsplash.com/photo-1550831107-1553da8c8464?auto=format&fit=crop&w=700&q=80"><div class="card-content"><small>04</small><h3>Teeth Whitening</h3><p>Professional smile brightening treatment.</p></div></article>
+    <article class="card reveal"><img src="https://images.unsplash.com/photo-1606265752439-1f18756aa2b5?auto=format&fit=crop&w=700&q=80"><div class="card-content"><small>05</small><h3>Braces & Aligners</h3><p>Modern orthodontic solutions for your smile.</p></div></article>
+    <article class="card reveal"><img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=700&q=80"><div class="card-content"><small>06</small><h3>Root Canal</h3><p>Comfort-focused treatment for damaged teeth.</p></div></article>
+  </div>
+</section>
+
+<section id="work" class="section work"><div class="label">03 / OUR WORK</div><h2 class="title">Real Results.<br><span class="serif">Real Confidence.</span></h2><div class="work-grid"><div class="work-img"><img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1000&q=85"></div><div class="work-img"><img src="https://images.unsplash.com/photo-1593022356769-11f762e25ed9?auto=format&fit=crop&w=800&q=85"></div><div class="work-img"><img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=800&q=85"></div></div></section>
+
+<section id="reviews" class="section">
+  <div class="reviews-head"><div><div class="label">04 / PATIENT REVIEWS</div><h2 class="title">Loved by Our <span class="serif">Patients.</span></h2></div><div class="rating">★★★★★ &nbsp; 4.9 average rating</div></div>
+  <div class="reviews"><article class="review reveal"><div class="stars">★★★★★</div><blockquote>“The entire experience was comfortable and professional.”</blockquote><small>— Priya M.</small></article><article class="review reveal"><div class="stars">★★★★★</div><blockquote>“Beautiful clinic, friendly staff and genuinely thoughtful care.”</blockquote><small>— Arjun K.</small></article><article class="review reveal"><div class="stars">★★★★★</div><blockquote>“Everything felt calm and modern from the first appointment.”</blockquote><small>— Meera R.</small></article></div>
+</section>
+
+<section id="contact" class="section contact"><div class="contact-grid"><div class="reveal"><div class="label">05 / CONTACT</div><h2>Ready for a<br><span class="serif">Healthier Smile?</span></h2><p>Let's make your next dental visit comfortable, clear and personalized.</p><a class="primary" href="tel:+919000000000">Call the Clinic ↗</a></div><div class="details reveal"><div class="detail"><small>LOCATION</small><p>Chennai, Tamil Nadu</p><a href="https://maps.google.com/?q=Chennai+Tamil+Nadu" target="_blank">Get Directions ↗</a></div><div class="detail"><small>PHONE</small><a href="tel:+919000000000">+91 90000 00000</a></div><div class="detail"><small>EMAIL</small><a href="mailto:hello@smilecare.com">hello@smilecare.com</a></div><div class="detail"><small>OPENING HOURS</small><p>Mon – Sat · 9:00 AM – 8:00 PM</p></div></div></div></section>
+
+<footer><div class="footer"><div><div class="logo"><i>S</i> SMILECARE</div><p>Modern dental care with<br>a human approach.</p></div><div><a href="https://instagram.com" target="_blank">Instagram ↗</a><br><br><a href="https://facebook.com" target="_blank">Facebook ↗</a></div></div><div class="copy">© 2026 SmileCare Dental Clinic · All Rights Reserved.</div></footer>
+
+<button class="chat" id="chat">✦</button><div class="chatbox" id="chatbox"><h4>Smile Assistant 🦷</h4><p>Hello! How can we help you today?</p><div class="quick"><a href="#contact">📅 Book an Appointment</a><a href="#treatments">🦷 View Treatments</a><a href="#contact">📍 Clinic Location</a><a href="tel:+919000000000">☎ Call Clinic</a></div></div>
+
+<script>
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(!reduce){
+ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.style.transition='opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1),filter 1s';e.target.style.opacity=1;e.target.style.transform='translateY(0)';e.target.style.filter='blur(0)';io.unobserve(e.target)}}),{threshold:.12});
+ document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
+ document.querySelectorAll('.hero-text>*').forEach((e,i)=>setTimeout(()=>{e.style.transition='opacity .9s,transform .9s cubic-bezier(.2,.7,.2,1)';e.style.opacity=1;e.style.transform='translateY(0)'},220+i*130));
+ let last=0;addEventListener('scroll',()=>{const y=scrollY;document.querySelector('.hero-photo').style.transform=`rotate(2deg) translateY(${Math.min(y*.05,35)}px)`;document.querySelectorAll('.blob').forEach((b,i)=>b.style.transform=`translateY(${y*(i?-.04:.06)}px)`);last=y},{passive:true});
+}
+document.getElementById('chat').onclick=()=>document.getElementById('chatbox').classList.toggle('open');
+</script>
+</body>
+</html>
