@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A.R. Ameen — Artist. Entrepreneur. Creative Visionary.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,800;1,6..96,500&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#050d0d;--deep:#0a1a19;--cream:#f5eddc;--teal:#00a896;--amber:#e6a94b;--mute:rgba(245,237,220,.62);
+--d:'Bodoni Moda','Didot','Times New Roman',serif;--s:'Instrument Sans',system-ui,sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:5rem;scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box;margin:0}
+body{background:var(--ink);color:var(--cream);font:400 1.0625rem/1.7 var(--s);overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--amber);outline-offset:4px}
+img{display:block;width:100%;height:100%;object-fit:cover}
+nav{position:fixed;top:0;left:0;right:0;z-index:40;display:flex;justify-content:space-between;align-items:center;padding:calc(.9rem + env(safe-area-inset-top,0px)) clamp(1.2rem,4vw,3.5rem) .9rem;background:rgba(5,13,13,.86);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid rgba(245,237,220,.1);font-size:.92rem}
+nav b{font:800 1.05rem var(--d);letter-spacing:.06em}
+nav div{display:flex;gap:2rem}nav a{color:var(--mute);transition:color .25s;padding:.3rem 0;border-bottom:1px solid transparent}nav a:hover,nav a.on{color:var(--cream);border-color:var(--teal)}
+.mb{display:none;background:none;border:1px solid rgba(245,237,220,.3);color:var(--cream);border-radius:99px;padding:.4rem 1rem;font:inherit;cursor:pointer}
+.bar{position:fixed;left:0;top:0;height:3px;width:100%;background:var(--teal);transform:scaleX(0);transform-origin:0 50%;z-index:30}
+.wrap{padding:0 clamp(1.2rem,6vw,6rem)}
+h1,h2,h3{font-family:var(--d);font-weight:500;line-height:1.02}
+/* hero */
+.hero{min-height:100svh;position:relative;display:grid;align-items:end;padding:8rem clamp(1.2rem,4vw,3.5rem) 3rem;overflow:hidden}
+.hero .ph{position:absolute;inset:0;z-index:0}
+.hero .ph img{object-position:70% 20%;filter:saturate(.85) brightness(.7);transform:scale(1.15);will-change:transform}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--ink) 5%,transparent 65%),linear-gradient(0deg,var(--ink),transparent 45%)}
+.hero h1{position:relative;z-index:2;font-weight:800;font-size:clamp(4.2rem,17vw,16rem);letter-spacing:-.02em;line-height:.86}
+.hero h1 span{display:block;overflow:hidden;padding-bottom:.06em}
+.hero h1 i{display:block;font-style:normal;transform:translateY(105%);animation:up 1.1s cubic-bezier(.2,.8,.1,1) forwards}
+.hero h1 span:nth-child(2) i{animation-delay:.14s;color:var(--teal)}
+@keyframes up{to{transform:none}}
+.hero p{position:relative;z-index:2;margin-top:2rem;max-width:34rem;font-size:1.2rem;color:var(--mute);opacity:0;animation:fade 1s .9s forwards}
+@keyframes fade{to{opacity:1}}
+.cta{display:inline-block;margin-top:1.6rem;padding:.85rem 1.7rem;border:1px solid var(--teal);border-radius:99px;transition:background .25s,color .25s}
+.cta:hover{background:var(--teal);color:var(--ink)}
+/* statement */
+.stmt{padding:18vh 0}
+.stmt p{font:500 clamp(1.7rem,4.4vw,4rem)/1.18 var(--d);max-width:24em}
+.stmt .w{opacity:.16;transition:opacity .2s}.stmt .w.on{opacity:1}
+/* split sections */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,7rem);align-items:start;padding:12vh 0}
+.split.rev .fig{order:2}
+.fig{position:sticky;top:12vh;aspect-ratio:4/5;overflow:hidden;clip-path:inset(0 0 100% 0);transition:clip-path 1.3s cubic-bezier(.7,0,.2,1)}
+.fig.in{clip-path:inset(0)}
+.fig img{height:120%;will-change:transform}
+.split h2{font-size:clamp(2.6rem,6vw,5.5rem);margin-bottom:.4em}
+.split h2+em{display:block;font:italic 500 1.4rem var(--d);color:var(--teal);margin-bottom:2rem}
+.split p{margin-bottom:1.3rem;max-width:34rem}
+.split p b{color:var(--amber);font-weight:500}
+.lines{margin:2.4rem 0;border-left:2px solid var(--teal);padding-left:1.4rem;font:italic 500 1.5rem/1.4 var(--d)}
+.lines span{display:block}
+.big{font:500 clamp(1.4rem,2.4vw,2rem)/1.3 var(--d);margin-top:2rem;color:var(--cream)}
+/* soul */
+.soul{position:relative;min-height:120vh;display:grid;place-items:center;text-align:center;overflow:hidden;background:var(--deep)}
+.soul .ph{position:absolute;inset:-10% 0;opacity:.32}
+.soul .ph img{filter:saturate(1.1)}
+.soul div.c{position:relative;padding:0 1.5rem}
+.soul small{font-size:.9rem;color:var(--mute)}
+.soul h2{font-size:clamp(4rem,15vw,14rem);font-weight:800;letter-spacing:-.02em}
+.soul h2 em{color:var(--amber);font-weight:500}
+.soul p{max-width:36rem;margin:1.5rem auto 0;font-size:1.15rem}
+.soul .two{margin-top:2.5rem;color:var(--mute)}
+/* horizontal */
+.hz{height:400vh;position:relative}
+.hz .pin{position:sticky;top:0;height:100svh;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
+.hz header{padding:0 clamp(1.2rem,6vw,6rem);margin-bottom:2.5rem}
+.hz h2{font-size:clamp(2.4rem,5vw,4.5rem)}
+.hz header p{color:var(--mute);margin-top:.8rem;max-width:32rem}
+.track{display:flex;gap:1.5rem;padding:0 clamp(1.2rem,6vw,6rem);will-change:transform}
+.card{flex:0 0 min(30rem,78vw);min-height:19rem;padding:2rem;border:1px solid rgba(245,237,220,.18);border-radius:4px;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(160deg,rgba(0,168,150,.12),transparent 60%)}
+.card h3{font-size:2.2rem}.card p{color:var(--mute)}
+.card:nth-child(even){transform:translateY(2.5rem)}
+/* vision */
+.vision{position:relative;min-height:110vh;display:flex;align-items:flex-end;overflow:hidden}
+.vision .ph{position:absolute;inset:-12% 0}
+.vision .ph img{object-position:50% 30%;filter:brightness(.55)}
+.vision::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,var(--ink) 8%,transparent 70%)}
+.vision .c{position:relative;z-index:2;padding-bottom:10vh}
+.vision h2{font-size:clamp(2.8rem,8vw,7.5rem);max-width:12em;margin-bottom:1.5rem}
+.vision p{max-width:34rem;font-size:1.15rem}
+.vision .b{font:italic 500 1.7rem var(--d);color:var(--teal);margin:1.2rem 0}
+/* contact */
+.contact{padding:18vh 0 6vh;text-align:center}
+.contact h2{font-size:clamp(3.5rem,13vw,12rem);font-weight:800}
+.contact a.m{display:inline-block;margin-top:1.5rem;font:italic 500 clamp(1.4rem,3vw,2.4rem) var(--d);border-bottom:2px solid var(--amber);padding-bottom:.2rem}
+footer{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding:4rem clamp(1.2rem,4vw,3.5rem) 2rem;color:var(--mute);font-size:.85rem}
+@media(max-width:820px){
+nav{flex-wrap:wrap}.mb{display:block}nav div{display:none;flex-direction:column;gap:.2rem;width:100%;padding-top:.8rem}nav.open div{display:flex}nav div a{padding:.7rem 0;font-size:1.05rem;border-bottom:1px solid rgba(245,237,220,.08)}
+.split{grid-template-columns:1fr}.split.rev .fig{order:0}.fig{position:relative;top:0;aspect-ratio:4/3}
+.hz{height:auto}.hz .pin{position:static;height:auto;padding:12vh 0}.track{flex-direction:column;transform:none!important}.card{flex:auto;transform:none!important}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero h1 i,.hero p{animation:none;transform:none;opacity:1}.fig{clip-path:none;transition:none}.stmt .w{opacity:1}}
+</style></head><body>
+<div class="bar" id="bar"></div>
+<nav id="nav"><b>A.R. AMEEN</b><button class="mb" id="mb" aria-expanded="false">Menu</button><div><a href="#artist">Artist</a><a href="#entrepreneur">Entrepreneur</a><a href="#rooh">Rooh Records</a><a href="#vision">Vision</a><a href="#contact">Contact</a></div></nav>
+
+<header class="hero" id="home">
+<div class="ph"><img data-par="0.12" src="image/hero.png" alt="A.R. Ameen in sunglasses and a navy plaid jacket"></div>
+<div style="position:relative;z-index:2">
+<h1 aria-label="A.R. Ameen"><span><i>A.R.</i></span><span><i>Ameen</i></span></h1>
+<p>Artist. Entrepreneur. Creative visionary.</p>
+<a class="cta" href="#artist">Explore the music</a> <a class="cta" href="#vision">Discover the vision</a>
+</div></header>
+
+<section class="stmt wrap"><p data-fill>A.R. Ameen represents a new generation of global creatives moving fluidly between music, entrepreneurship, culture, and innovation. His journey is not simply about following a path. It is about building one.</p></section>
+
+<section class="wrap" id="artist"><div class="split">
+<div class="fig"><img data-par="0.1" src="image/Artist.png" alt="A.R. Ameen at a vintage microphone" style="object-position:50% 30%"></div>
+<div>
+<h2>Artist</h2><em>For Ameen, music begins with emotion.</em>
+<p>His artistic journey has taken him from Indian cinema and live stages around the world to a new chapter centered on independent music, original collaborations, and a sound increasingly his own.</p>
+<p>Ameen first reached audiences through songs including <i>Maula Wa Sallim</i>, followed by performances at sold-out venues globally, and recordings across multiple Indian languages. His work has continued to evolve through film music, independent releases, and collaborations with artists and creators from different musical worlds. His 2026 release <b>Bheegi Bheegi</b> marked another step in that evolution and the beginning of a new chapter through Rooh Records.</p>
+<p>Rather than defining himself through one genre, language, or market, Ameen approaches music with curiosity.</p>
+<div class="lines"><span>Indian musical traditions can meet contemporary pop.</span><span>Cinematic storytelling can meet independent music.</span><span>Sounds from different cultures can exist within the same creative world.</span></div>
+<h3 class="big" style="color:var(--teal)">A global perspective</h3>
+<p style="margin-top:1rem">Ameen's ambition is to create music that travels beyond geography. That means collaborating across cultures, experimenting with new genres, and bringing together artists whose musical identities might otherwise never intersect.</p>
+<p class="big">Create music that feels personal enough to be authentic and universal enough to connect.</p>
+<a class="cta" href="#contact">Listen now</a>
+</div></div></section>
+
+<section class="wrap" id="entrepreneur"><div class="split rev">
+<div class="fig"><img data-par="0.1" src="image/Entrepreneur.png" alt="A.R. Ameen on stage holding a microphone"></div>
+<div>
+<h2>Entrepreneur</h2><em>Building the future of creative culture.</em>
+<p>A.R. Ameen approaches entrepreneurship the same way he approaches music: with curiosity, independence, and a long-term perspective.</p>
+<p>His interests sit at the intersection of <b>music, technology, entertainment, culture and creative enterprise</b>. Rather than viewing an artist's role as beginning and ending with the music, Ameen sees an opportunity to build ecosystems around creativity: platforms that can discover talent, encourage experimentation, create meaningful intellectual property, and connect artists with audiences around the world.</p>
+</div></div></section>
+
+<section class="soul" id="rooh">
+<div class="ph"><img data-par="0.15" src="image/Rooh Records.jpeg" alt=""></div>
+<div class="c"><small>Founded by A.R. Ameen</small>
+<h2>Rooh <em>Records</em></h2>
+<p>“Rooh” means <b style="color:var(--amber);font-weight:500">soul</b>. That philosophy led to a home where music can be developed with patience, authenticity, and creative freedom.</p>
+<p class="two">A platform for new sounds, new voices, and new-age storytelling, combining emotional depth with contemporary production and an international outlook. Not a chase for short-term attention, but something with the strength and identity to endure.</p></div>
+</section>
+
+<section class="hz" id="beyond"><div class="pin">
+<header><h2>Beyond the record label</h2><p>Rooh is the beginning of a broader journey: businesses and partnerships that reshape how creativity is developed, experienced, and shared.</p></header>
+<div class="track" id="track">
+<div class="card"><h3>Music &amp; intellectual property</h3><p>Developing original music, catalogs, and long-term creative assets.</p></div>
+<div class="card"><h3>Artist development</h3><p>Creating opportunities for emerging artists, producers, writers, and collaborators.</p></div>
+<div class="card"><h3>Technology</h3><p>Exploring how emerging technologies can expand music creation, distribution and fan experiences.</p></div>
+<div class="card"><h3>Live &amp; experiential entertainment</h3><p>Building experiences that connect audiences with music beyond traditional recordings.</p></div>
+<div class="card"><h3>Global collaboration</h3><p>Creating bridges between India and creative communities worldwide.</p></div>
+<div class="card"><h3>Culture &amp; lifestyle</h3><p>Where music, design, media, and contemporary culture intersect: technology, investments, fashion, wellness, film, philanthropy.</p></div>
+</div></div></section>
+
+<section class="vision" id="vision">
+<div class="ph"><img data-par="0.12" src="image/Vision.jpeg" alt="A.R. Ameen with A.R. Rahman in a wood-panelled library"></div>
+<div class="c wrap"><h2>A world built around sound.</h2>
+<p>The next generation of creative companies will not fit neatly into one category.</p>
+<p class="b">Neither will the people building them.</p>
+<p>Ameen's entrepreneurial vision is to build ventures where creativity and commerce are strengthened by one another, without compromising the soul of the music.</p></div>
+</section>
+
+<section class="contact wrap" id="contact"><h2>Contact</h2><a class="m" href="mailto:hello@example.com">hello@example.com</a></section>
+<footer><span>© 2026 A.R. Ameen</span><span>Rooh Records</span></footer>
+
+<script>
+const $=(s,r=document)=>[...r.querySelectorAll(s)],vh=()=>innerHeight;
+// split statement into words
+$('[data-fill]').forEach(p=>{p.innerHTML=p.textContent.split(' ').map(w=>`<span class="w">${w}</span>`).join(' ')});
+const words=$('.w'),fig=$('.fig'),par=$('[data-par]'),hz=$('.hz')[0],track=$('#track')[0],bar=$('#bar')[0];
+const clamp=(v,a=0,b=1)=>Math.min(b,Math.max(a,v));
+let tick=false;
+function frame(){tick=false;const y=scrollY,h=vh();
+bar.style.transform=`scaleX(${clamp(y/(document.body.scrollHeight-h))})`;
+if(words.length){const r=words[0].parentElement.getBoundingClientRect(),p=clamp((h*.85-r.top)/(r.height+h*.35));words.forEach((w,i)=>w.classList.toggle('on',i/words.length<p))}
+fig.forEach(f=>{if(f.getBoundingClientRect().top<h*.85)f.classList.add('in')});
+par.forEach(el=>{const b=el.parentElement.getBoundingClientRect();if(b.bottom<-200||b.top>h+200)return;
+const c=(b.top+b.height/2-h/2)*+el.dataset.par;el.style.transform=el.closest('.hero')?`scale(1.15) translateY(${y*.12}px)`:`translateY(${-c}px)`});
+if(matchMedia('(min-width:821px)').matches){const r=hz.getBoundingClientRect(),max=track.scrollWidth-innerWidth+80,p=clamp(-r.top/(hz.offsetHeight-h));track.style.transform=`translateX(${-max*p}px)`}}
+const nav=document.getElementById('nav'),mb=document.getElementById('mb'),links=$('nav div a'),secs=links.map(a=>document.querySelector(a.getAttribute('href')));
+mb.onclick=()=>mb.setAttribute('aria-expanded',nav.classList.toggle('open'));
+links.forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');mb.setAttribute('aria-expanded','false')}));
+function spy(){const m=vh()*.4;let cur=-1;secs.forEach((s,i)=>{if(s.getBoundingClientRect().top<m)cur=i});links.forEach((a,i)=>a.classList.toggle('on',i===cur))}
+addEventListener('scroll',spy,{passive:true});spy();
+addEventListener('scroll',()=>{if(!tick){tick=true;requestAnimationFrame(frame)}},{passive:true});addEventListener('resize',frame);frame();
+</script></body></html>

@@ -231,6 +231,42 @@ const templates = [
     accentColor: "#888888",
     gradientFrom: "#0b0b0b",
     gradientTo: "#171717"
+  },
+  {
+    name: "A.R. Ameen — Artist Portfolio",
+    description: "Elegant artist portfolio with a teal and cream color scheme, scroll-driven animations, hero section, and creative visionary showcase.",
+    category: "Music",
+    image: "",
+    link: "music/A.R. Ameen (1).html",
+    tags: ["HTML", "CSS", "JS"],
+    featured: true,
+    accentColor: "#00a896",
+    gradientFrom: "#050d0d",
+    gradientTo: "#0a1a19"
+  },
+  {
+    name: "A.R. Ameen — Creative Visionary",
+    description: "Dark premium artist website with Bodoni typography, teal accents, scroll progress bar, and an immersive biographical layout.",
+    category: "Music",
+    image: "",
+    link: "music/A.R. Ameen (2).html",
+    tags: ["HTML", "CSS", "JS"],
+    featured: false,
+    accentColor: "#e6a94b",
+    gradientFrom: "#050d0d",
+    gradientTo: "#0a1a19"
+  },
+  {
+    name: "A.R. Ameen — Bold Showcase",
+    description: "Striking artist landing page with stacked scroll panels, bold uppercase typography, warm gold and indigo palette, and arch-shaped imagery.",
+    category: "Music",
+    image: "",
+    link: "music/index2.html.html",
+    tags: ["HTML", "CSS", "JS"],
+    featured: false,
+    accentColor: "#F6A21E",
+    gradientFrom: "#171347",
+    gradientTo: "#0B6B63"
   }
 ];
 
@@ -358,6 +394,18 @@ function generateMockup(t, accent) {
       <circle cx="32" cy="10" r="2" fill="${accent}" opacity="0.5"/>
       <circle cx="8" cy="24" r="2" fill="${accent}" opacity="0.5"/>
       <circle cx="32" cy="24" r="2" fill="${accent}" opacity="0.5"/>
+    `;
+  } else if (cat === "Music") {
+    inner = `
+      <circle cx="20" cy="17" r="8" fill="none" stroke="${accent}" stroke-width="1.2" opacity="0.4"/>
+      <circle cx="20" cy="17" r="4" fill="none" stroke="${accent}" stroke-width="1" opacity="0.6"/>
+      <circle cx="20" cy="17" r="1.5" fill="${accent}" opacity="0.9"/>
+      <path d="M24 17 V10 H30 V12 H26 V17" fill="none" stroke="${accent}" stroke-width="1.2" opacity="0.7"/>
+      <rect x="3" y="22" width="5" height="4" rx="0.5" fill="${accent}" opacity="0.4"/>
+      <rect x="9" y="20" width="5" height="6" rx="0.5" fill="${accent}" opacity="0.5"/>
+      <rect x="15" y="21" width="5" height="5" rx="0.5" fill="${accent}" opacity="0.35"/>
+      <rect x="27" y="22" width="5" height="4" rx="0.5" fill="${accent}" opacity="0.3"/>
+      <rect x="33" y="20" width="5" height="6" rx="0.5" fill="${accent}" opacity="0.45"/>
     `;
   } else {
     // Agency

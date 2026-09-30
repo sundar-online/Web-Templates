@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A.R. Ameen — Artist. Entrepreneur. Creative Visionary.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400;12..96,75..100,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+@property --c{syntax:'<number>';inherits:true;initial-value:0}
+:root{--mg:#F6A21E;--in:#171347;--cr:#FBF1DC;--tl:#0B6B63;--d:'Bricolage Grotesque','Arial Narrow',Arial,sans-serif;--s:'Newsreader',Georgia,serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:auto}*,*::before,*::after{box-sizing:border-box;margin:0}
+body{background:var(--in);color:var(--cr);font:400 1.2rem/1.6 var(--s);overflow-x:clip}
+a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:3px solid var(--mg);outline-offset:3px}
+img{display:block}
+.p{position:sticky;top:0;background:var(--bg);color:var(--fg);overflow:hidden}
+.in{padding:clamp(6rem,14vh,9rem) clamp(1.2rem,5vw,5rem);transform-origin:50% 100%;will-change:transform}
+h2,h3,.d{font-family:var(--d);font-weight:800;font-variation-settings:'wdth' 75;text-transform:uppercase;line-height:.92;letter-spacing:-.01em}
+h2{font-size:clamp(3.2rem,9vw,9rem)}
+.arch{position:relative;isolation:isolate;overflow:hidden;border-radius:999px 999px 0 0;background:var(--mg);transition:--c .7s}
+.arch:hover{--c:1}
+.arch img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.arch .g{filter:grayscale(1) contrast(1.15);mix-blend-mode:multiply}
+.arch .c{opacity:var(--c)}
+.arch::after{content:"";position:absolute;inset:0;background:var(--in);mix-blend-mode:lighten;opacity:calc(1 - var(--c));pointer-events:none}
+.btn{display:inline-block;padding:.8rem 1.6rem;border-radius:99px;border:2px solid currentColor;font:800 .95rem var(--d);font-variation-settings:'wdth' 85;text-transform:uppercase;letter-spacing:.04em;transition:background .25s,color .25s}
+.btn:hover{background:var(--mg);border-color:var(--mg);color:var(--in)}
+/* nav */
+nav{position:fixed;z-index:50;top:calc(.8rem + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);width:min(94vw,880px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.4rem;padding:.55rem .7rem .55rem 1.3rem;border-radius:99px;background:rgba(23,19,71,.84);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border:1px solid rgba(251,241,220,.2);color:var(--cr);font:500 .95rem var(--d)}
+nav .lg{font:800 1rem var(--d);font-variation-settings:'wdth' 75;text-transform:uppercase;letter-spacing:.05em}
+nav .lk{display:flex;gap:.2rem}nav .lk a{padding:.45rem .95rem;border-radius:99px;transition:background .25s,color .25s}
+nav .lk a:hover{background:rgba(251,241,220,.14)}nav .lk a.on{background:var(--mg);color:var(--in)}
+.mb{display:none;padding:.45rem 1rem;border:1px solid rgba(251,241,220,.4);border-radius:99px}
+/* hero */
+.hero{min-height:100svh}
+.hero .in{min-height:100svh;display:grid;align-content:end;padding-bottom:2.5rem;position:relative}
+.hero .arch{position:absolute;right:clamp(1.2rem,9vw,9rem);top:clamp(6rem,12vh,8rem);width:min(40vw,520px);height:min(68svh,700px);animation:rise 1.3s cubic-bezier(.2,.8,.1,1) both;z-index:1}
+@keyframes rise{from{transform:translateY(14%);opacity:0}}
+.name{position:relative;z-index:2;color:var(--mg);font-size:min(27vw,42svh);line-height:.8;user-select:none}
+.name .ln{display:block;white-space:nowrap}
+.name .ar{font-size:.62em}
+.name b{display:inline-block;font-weight:800;animation:drop 1s cubic-bezier(.2,.8,.1,1) both;animation-delay:calc(var(--i)*70ms + 200ms)}
+@keyframes drop{from{transform:translateY(110%) rotate(6deg);opacity:0}}
+.hero .row{position:relative;z-index:3;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;margin-top:1.4rem}
+.hero .row p{font-size:1.3rem}.hero .row div{display:flex;gap:.7rem;flex-wrap:wrap}
+.badge{position:absolute;z-index:3;width:clamp(110px,14vw,170px);left:clamp(1.2rem,5vw,5rem);top:clamp(7rem,16vh,10rem);will-change:transform;color:var(--cr)}
+.badge text{font:800 13.5px var(--d);letter-spacing:.09em;text-transform:uppercase;fill:currentColor}
+/* artist */
+.artist .grid,.biz .grid{display:grid;grid-template-columns:5fr 6fr;gap:clamp(2rem,6vw,6rem);align-items:start}
+.artist .arch,.biz .arch{position:sticky;top:12vh;aspect-ratio:3/4.2}
+.lead{font:800 clamp(2rem,4.6vw,4.4rem)/.98 var(--d);font-variation-settings:'wdth' 75;text-transform:uppercase;margin:1.5rem 0 2rem}
+.artist p,.biz p,.vis p{max-width:36rem;margin-bottom:1.2rem}
+.k{display:block;font:800 clamp(1.6rem,3.6vw,3.2rem)/1.05 var(--d);font-variation-settings:'wdth' 75;text-transform:uppercase;will-change:transform}
+.k:nth-child(2){color:var(--cr);background:var(--in);padding:.12em .35em;border-radius:.5em}
+.ks{margin:2.5rem 0 3rem;display:grid;gap:.6rem}
+.artist h3{font-size:clamp(1.8rem,3vw,2.6rem);margin:2rem 0 1rem}
+.big{font:400 italic clamp(1.6rem,2.6vw,2.3rem)/1.25 var(--s);margin:2rem 0}
+/* biz */
+.tags{display:flex;flex-wrap:wrap;gap:.6rem;margin:2rem 0}
+.tags span{padding:.5rem 1.2rem;border-radius:99px;background:var(--in);color:var(--cr);font:800 1rem var(--d);font-variation-settings:'wdth' 85;text-transform:uppercase;transition:transform .3s}
+.tags span:nth-child(odd){background:var(--mg);color:var(--in)}
+.tags span:hover{transform:rotate(-4deg) scale(1.08)}
+/* rooh */
+.rooh .in{text-align:center;padding-bottom:0}
+.rooh h2{font-size:clamp(5rem,25vw,26rem);line-height:.78}
+.rooh .soul{position:relative;display:inline-block;margin:2rem 0 1rem;font:400 italic clamp(1.6rem,3vw,2.6rem) var(--s)}
+.rooh .soul b{font:800 1em var(--d);font-style:normal;font-variation-settings:'wdth' 75;text-transform:uppercase;color:var(--mg)}
+.rooh p{max-width:38rem;margin:0 auto 1.2rem}
+.wide{height:88svh;margin:3rem calc(-1*clamp(1.2rem,5vw,5rem)) 0;background:var(--in)}
+.wide img{width:100%;height:100%;object-fit:cover;object-position:60% 30%;clip-path:circle(6% at 50% 50%);will-change:clip-path}
+/* beyond */
+.beyond h2{margin-bottom:1rem;max-width:11em}
+.beyond .sub{max-width:36rem;color:rgba(251,241,220,.72);margin-bottom:3rem}
+.rows{list-style:none;padding:0;border-top:1px solid rgba(251,241,220,.25)}
+.r{border-bottom:1px solid rgba(251,241,220,.25)}
+.r button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.4rem 0;text-align:left;font:800 clamp(1.7rem,4.6vw,4.2rem)/1 var(--d);font-variation-settings:'wdth' 75;text-transform:uppercase;transition:color .3s,padding .4s}
+.r button i{flex:none;width:2.6rem;height:2.6rem;border:2px solid currentColor;border-radius:50%;display:grid;place-items:center;font:400 1.6rem/1 var(--d);font-style:normal;transition:transform .4s}
+.r:hover button,.r.open button{color:var(--mg);padding-left:1.2rem}
+.r.open button i{transform:rotate(45deg)}
+.r .d2{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s cubic-bezier(.2,.8,.1,1)}
+.r.open .d2{grid-template-rows:1fr}.r .d2 p{overflow:hidden;max-width:40rem;padding-left:1.2rem;color:rgba(251,241,220,.82)}
+.r.open .d2 p{padding-bottom:1.6rem}
+/* vision */
+.vis h2{margin:.6rem 0 2rem;max-width:9em}
+.vis h2 .v{display:inline-block;transform:translateY(80%);opacity:0;transition:transform .8s cubic-bezier(.2,.8,.1,1),opacity .6s}
+.vis h2 .v.on{transform:none;opacity:1}
+.vis .grid{display:grid;grid-template-columns:6fr 5fr;gap:clamp(2rem,6vw,6rem);align-items:end}
+.vis .arch{aspect-ratio:3/4}
+.vis .em{font:800 clamp(1.6rem,3vw,2.6rem)/1 var(--d);font-variation-settings:'wdth' 75;text-transform:uppercase;margin:1.4rem 0}
+.contact{margin-top:clamp(4rem,12vh,8rem);border-top:3px solid var(--in);padding-top:2rem;display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:1rem}
+.contact h2{font-size:clamp(4rem,16vw,16rem)}
+.contact a{font:800 clamp(1.3rem,2.6vw,2.2rem) var(--d);border-bottom:3px solid var(--in)}
+footer{padding:1.4rem 0 .5rem;display:flex;justify-content:space-between;font-size:.95rem}
+.cur{position:fixed;left:0;top:0;width:16px;height:16px;margin:-8px 0 0 -8px;border-radius:50%;background:var(--cr);mix-blend-mode:difference;pointer-events:none;z-index:99;transition:width .3s,height .3s,margin .3s;opacity:0}
+.cur.big{width:70px;height:70px;margin:-35px 0 0 -35px}
+@media(max-width:820px){
+nav .lk{display:none;order:3;width:100%;flex-direction:column;padding:.4rem 0}nav.open .lk{display:flex}nav{border-radius:28px}.mb{display:block}
+.artist .grid,.biz .grid,.vis .grid{grid-template-columns:1fr}.artist .arch,.biz .arch{position:relative;top:0;max-width:420px}
+.hero .arch{width:62vw;height:52svh;right:1rem}.badge{top:8rem;left:1.2rem;right:auto;width:96px}
+.name{font-size:min(24vw,30svh)}.name .ar{font-size:.7em}
+}
+@media(prefers-reduced-motion:reduce){.name b,.hero .arch{animation:none}.vis h2 .v{opacity:1;transform:none}.wide img{clip-path:none}}
+</style></head><body>
+<nav id="nav"><a class="lg" href="#home" data-i="0">A.R. Ameen</a><button class="mb" id="mb" aria-expanded="false">Menu</button>
+<div class="lk"><a href="#artist" data-i="1">Artist</a><a href="#entrepreneur" data-i="2">Entrepreneur</a><a href="#rooh" data-i="3">Rooh Records</a><a href="#beyond" data-i="4">Beyond</a><a href="#vision" data-i="5">Vision</a></div></nav>
+
+<section class="p hero" id="home" style="--bg:var(--in);--fg:var(--cr)"><div class="in">
+<div class="arch" id="arch"><img class="g" src="image/hero.png" alt="A.R. Ameen in sunglasses and a plaid jacket"><img class="c" src="image/Rooh Records.jpeg" alt="" style="object-position:70% 20%"></div>
+<svg class="badge" id="badge" viewBox="0 0 200 200" aria-hidden="true"><defs><path id="cp" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs><text><textPath href="#cp">Artist • Entrepreneur • Creative visionary • </textPath></text><circle cx="100" cy="100" r="14" fill="#F6A21E"/></svg>
+<h1 class="name d" aria-label="A.R. Ameen"><span class="ln ar" id="l1"></span><span class="ln" id="l2"></span></h1>
+<div class="row"><p>Artist. Entrepreneur. Creative visionary.</p><div><a class="btn" href="#artist" data-i="1">Explore the music</a><a class="btn" href="#vision" data-i="5">Discover the vision</a></div></div>
+</div></section>
+
+<section class="p artist" id="artist" style="--bg:var(--mg);--fg:var(--in)"><div class="in"><div class="grid">
+<div class="arch"><img class="g" src="image/Artist.png" alt="A.R. Ameen at a vintage microphone" style="object-position:50% 25%"><img class="c" src="image/Rooh Records.jpeg" alt="" style="object-position:50% 25%"></div>
+<div><h2>Artist</h2>
+<p class="lead">For Ameen, music begins with emotion.</p>
+<p>A.R. Ameen represents a new generation of global creatives moving fluidly between music, entrepreneurship, culture, and innovation. His journey is not simply about following a path. It is about building one.</p>
+<p>His artistic journey has taken him from Indian cinema and live stages around the world to a new chapter centered on independent music, original collaborations, and a sound increasingly his own.</p>
+<p>Ameen first reached audiences through songs including <i>Maula Wa Sallim</i>, followed by performances at sold-out venues globally, and recordings across multiple Indian languages. His work has continued to evolve through film music, independent releases, and collaborations with artists and creators from different musical worlds. His 2026 release <i>Bheegi Bheegi</i> marked another step in that evolution and the beginning of a new chapter through Rooh Records.</p>
+<p>Rather than defining himself through one genre, language, or market, Ameen approaches music with curiosity.</p>
+<div class="ks"><span class="k">Indian musical traditions can meet contemporary pop.</span><span class="k">Cinematic storytelling can meet independent music.</span><span class="k">Sounds from different cultures can exist within the same creative world.</span></div>
+<h3>A global perspective</h3>
+<p>Ameen's ambition is to create music that travels beyond geography. That means collaborating across cultures, experimenting with new genres, and bringing together artists whose musical identities might otherwise never intersect.</p>
+<p class="big">Create music that feels personal enough to be authentic and universal enough to connect.</p>
+<a class="btn" href="#vision" data-i="5">Listen now</a>
+</div></div></div></section>
+
+<section class="p biz" id="entrepreneur" style="--bg:var(--cr);--fg:var(--in)"><div class="in"><div class="grid">
+<div><h2>Entrepreneur</h2><p class="lead">Building the future of creative culture.</p>
+<p>A.R. Ameen approaches entrepreneurship the same way he approaches music: with curiosity, independence, and a long-term perspective.</p>
+<p>His interests sit at the intersection of:</p>
+<div class="tags"><span>Music</span><span>Technology</span><span>Entertainment</span><span>Culture</span><span>Creative enterprise</span></div>
+<p>Rather than viewing an artist's role as beginning and ending with the music, Ameen sees an opportunity to build ecosystems around creativity: platforms that can discover talent, encourage experimentation, create meaningful intellectual property, and connect artists with audiences around the world.</p></div>
+<div class="arch"><img class="g" src="image/Rooh Records.jpeg" alt="A.R. Ameen on stage with a microphone"><img class="c" src="image/Rooh Records.jpeg" alt="" style="object-position:35% 50%"></div>
+</div></div></section>
+
+<section class="p rooh" id="rooh" style="--bg:var(--tl);--fg:var(--cr)"><div class="in">
+<p>A venture founded by A.R. Ameen</p><h2 class="d">Rooh Records</h2>
+<p class="soul">“Rooh” means <b>soul.</b></p>
+<p>That philosophy led to the creation of Rooh Records: a home where music can be developed with patience, authenticity, and creative freedom.</p>
+<p>It was conceived as a platform for new sounds, new voices, and new-age storytelling, combining emotional depth with contemporary production and an international outlook. Building Rooh is not about chasing short-term attention. It is about developing something with the strength and identity to endure.</p>
+<div class="wide" id="wide"><img src="image/Rooh Records.jpeg" alt="A.R. Ameen singing on stage"></div>
+</div></section>
+
+<section class="p beyond" id="beyond" style="--bg:var(--in);--fg:var(--cr)"><div class="in">
+<h2>Beyond the record label</h2>
+<p class="sub">Rooh represents the beginning of a broader entrepreneurial journey. Ameen is interested in businesses and partnerships that can reshape how creativity is developed, experienced, and shared.</p>
+<ul class="rows" id="rows">
+<li class="r open"><button aria-expanded="true">Music &amp; intellectual property<i>+</i></button><div class="d2"><p>Developing original music, catalogs, and long-term creative assets.</p></div></li>
+<li class="r"><button aria-expanded="false">Artist development<i>+</i></button><div class="d2"><p>Creating opportunities for emerging artists, producers, writers, and collaborators.</p></div></li>
+<li class="r"><button aria-expanded="false">Technology<i>+</i></button><div class="d2"><p>Exploring how emerging technologies can expand music creation, distribution and fan experiences.</p></div></li>
+<li class="r"><button aria-expanded="false">Live &amp; experiential entertainment<i>+</i></button><div class="d2"><p>Building experiences that connect audiences with music beyond traditional recordings.</p></div></li>
+<li class="r"><button aria-expanded="false">Global collaboration<i>+</i></button><div class="d2"><p>Creating bridges between India and creative communities worldwide.</p></div></li>
+<li class="r"><button aria-expanded="false">Culture &amp; lifestyle<i>+</i></button><div class="d2"><p>Developing ideas where music, design, media, and contemporary culture intersect: technology, investments, fashion, wellness, film, philanthropy.</p></div></li>
+</ul></div></section>
+
+<section class="p vis" id="vision" style="--bg:var(--mg);--fg:var(--in)"><div class="in">
+<div class="grid"><div><h2 id="vh">A world built around sound.</h2>
+<p>The next generation of creative companies will not fit neatly into one category.</p>
+<p class="em">Neither will the people building them.</p>
+<p>Ameen's entrepreneurial vision is to build ventures where creativity and commerce are strengthened by one another, without compromising the soul of the music.</p></div>
+<div class="arch"><img class="g" src="image/Vision.jpeg" alt="A.R. Ameen with A.R. Rahman in a library"><img class="c" src="image/Rooh Records.jpeg" alt="" style="object-position:70% 50%"></div></div>
+<div class="contact" id="contact"><h2>Contact</h2><a href="mailto:hello@example.com">hello@example.com</a></div>
+<footer><span>© 2026 A.R. Ameen</span><span>Rooh Records</span></footer>
+</div></section>
+<div class="cur" id="cur"></div>
+
+<script>
+const $=(s,r=document)=>[...r.querySelectorAll(s)],clamp=(v,a=0,b=1)=>Math.min(b,Math.max(a,v));
+const still=matchMedia('(prefers-reduced-motion:reduce)').matches,fine=matchMedia('(hover:hover) and (pointer:fine)').matches;
+const split=(el,t)=>{el.innerHTML=[...t].map((c,i)=>`<b style="--i:${i}">${c}</b>`).join('')};
+split($('#l1')[0],'A.R.');split($('#l2')[0],'AMEEN');
+const vh=$('#vh')[0];vh.innerHTML=vh.textContent.split(' ').map(w=>`<span class="v">${w}</span>`).join(' ');
+const panels=$('.p'),navA=$('nav a[data-i]'),nav=$('#nav'),mb=$('#mb')[0],arch=$('#arch')[0],badge=$('#badge')[0],l1=$('#l1')[0],l2=$('#l2')[0],wide=$('#wide img')[0],vw=$('.v'),ks=$('.k');
+let tops=[];
+function layout(){const H=innerHeight;let a=0;tops=panels.map(p=>{const t=a;a+=p.offsetHeight;p.style.top=Math.min(0,H-p.offsetHeight)+'px';return t});frame()}
+function go(i){scrollTo({top:tops[i],behavior:still?'auto':'smooth'});nav.classList.remove('open');mb.setAttribute('aria-expanded','false')}
+$('a[data-i]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();go(+a.dataset.i)}));
+mb.onclick=()=>mb.setAttribute('aria-expanded',nav.classList.toggle('open'));
+// accordion
+const rows=$('.r');rows.forEach(r=>{const b=r.querySelector('button'),set=o=>{r.classList.toggle('open',o);b.setAttribute('aria-expanded',o)};
+b.onclick=()=>{const o=!r.classList.contains('open');rows.forEach(x=>{x.classList.remove('open');x.firstChild.setAttribute('aria-expanded','false')});set(o)};
+if(fine)r.addEventListener('mouseenter',()=>{rows.forEach(x=>{x.classList.remove('open');x.firstChild.setAttribute('aria-expanded','false')});set(true)})});
+function frame(){const y=scrollY,H=innerHeight;
+// spy
+let cur=0;tops.forEach((t,i)=>{if(y+H*.5>=t)cur=i});navA.forEach(a=>a.classList.toggle('on',+a.dataset.i===cur&&a.dataset.i!=='0'));
+if(still)return;
+// stack: previous panel recedes as next covers it
+panels.forEach((p,i)=>{const n=panels[i+1];if(!n)return;const p1=clamp(1-n.getBoundingClientRect().top/H);const inn=p.firstElementChild;inn.style.transform=`scale(${1-.06*p1})`;inn.style.filter=`brightness(${1-.35*p1})`});
+// hero
+const hp=clamp(y/(H*.8));arch.style.setProperty('--c',arch.matches(':hover')?1:hp);
+l1.style.transform=`translateX(${-y*.2}px)`;l2.style.transform=`translateX(${y*.12}px)`;
+badge.style.transform=`rotate(${y*.35}deg)`;
+// artist kinetic lines
+ks.forEach((k,i)=>{const r=k.getBoundingClientRect(),p=(r.top+r.height/2-H/2)/H;k.style.transform=`translateX(${p*(i%2?-1:1)*40}px)`});
+// rooh circle reveal
+const wr=wide.parentElement.getBoundingClientRect(),wp=clamp((H*.95-wr.top)/(H*.9));wide.style.clipPath=`circle(${6+wp*84}% at 50% 50%)`;
+// vision headline
+const vr=vh.getBoundingClientRect(),vp=clamp((H*.95-vr.top)/(H*.4));vw.forEach((w,i)=>w.classList.toggle('on',i/vw.length<vp+.05))}
+let tk=false;addEventListener('scroll',()=>{if(!tk){tk=true;requestAnimationFrame(()=>{tk=false;frame()})}},{passive:true});
+addEventListener('resize',layout);addEventListener('load',layout);document.fonts&&document.fonts.ready.then(layout);layout();
+// cursor
+if(fine&&!still){const c=$('#cur')[0];addEventListener('mousemove',e=>{c.style.opacity=1;c.style.transform=`translate(${e.clientX}px,${e.clientY}px)`});
+$('a,button,.arch').forEach(el=>{el.addEventListener('mouseenter',()=>c.classList.add('big'));el.addEventListener('mouseleave',()=>c.classList.remove('big'))})}
+</script></body></html>
