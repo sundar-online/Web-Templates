@@ -17,6 +17,12 @@ This project includes:
 Web-Templates/
 ├── Dental_Templete/
 ├── Img/
+├── RealEstate/
+│   ├── estatex/
+│   ├── kolam/
+│   ├── plotline/
+│   └── urban-estate-new-design/
+├── music/
 ├── index.html
 ├── style.css
 ├── script.js
@@ -25,11 +31,13 @@ Web-Templates/
 
 ## Files
 
-- `index.html` — main page structure and content
+- `index.html` — main page structure and template showcase gallery
 - `style.css` — stylesheet for layout, typography, colors, and responsiveness
-- `script.js` — interactive elements and page behavior
-- `Img/` — image assets used in the template
-- `Dental_Templete/` — additional template-related content
+- `script.js` — interactive filtering, search, and template gallery behavior
+- `Img/` — image assets used in the templates
+- `Dental_Templete/` — dental healthcare templates
+- `RealEstate/` — real estate agency and property studio templates (EstateX, Kolam Homes, Plotline Realty, Urban Estate)
+- `music/` — artist and musician portfolio templates
 
 ## Features
 

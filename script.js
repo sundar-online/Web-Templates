@@ -267,6 +267,54 @@ const templates = [
     accentColor: "#F6A21E",
     gradientFrom: "#171347",
     gradientTo: "#0B6B63"
+  },
+  {
+    name: "EstateX — Real Estate",
+    description: "Premium real estate agency template with hero property search, buy/rent filtering, property grids, and agent contact workflows.",
+    category: "Real Estate",
+    image: "",
+    link: "RealEstate/estatex/index.html",
+    tags: ["HTML", "CSS", "JS"],
+    featured: true,
+    accentColor: "#b88a35",
+    gradientFrom: "#0e1c33",
+    gradientTo: "#16294a"
+  },
+  {
+    name: "Kolam Homes",
+    description: "Warm, authentic real estate website with verified listing badges, neighborhood-based discovery, buyer trust metrics, and property journal.",
+    category: "Real Estate",
+    image: "",
+    link: "RealEstate/kolam/index.html",
+    tags: ["HTML", "CSS", "JS"],
+    featured: false,
+    accentColor: "#2437c9",
+    gradientFrom: "#10122b",
+    gradientTo: "#1a2a9c"
+  },
+  {
+    name: "Plotline Realty",
+    description: "Modern editorial property platform with bold typography, property mosaics, quick neighborhood links, and transparent buyer guides.",
+    category: "Real Estate",
+    image: "",
+    link: "RealEstate/plotline/index.html",
+    tags: ["HTML", "CSS", "JS"],
+    featured: false,
+    accentColor: "#ff6a4d",
+    gradientFrom: "#0b3c3a",
+    gradientTo: "#14605b"
+  },
+  {
+    name: "Urban Estate — Studio",
+    description: "Luxury architectural property studio showcase with dark mode aesthetic, curated property shortlist, brand manifesto, and field notes.",
+    category: "Real Estate",
+    image: "",
+    link: "RealEstate/urban-estate-new-design/index.html",
+    tags: ["HTML", "CSS", "JS"],
+    featured: true,
+    accentColor: "#ff5b2e",
+    gradientFrom: "#171916",
+    gradientTo: "#292a25"
   }
 ];
 
@@ -406,6 +454,15 @@ function generateMockup(t, accent) {
       <rect x="15" y="21" width="5" height="5" rx="0.5" fill="${accent}" opacity="0.35"/>
       <rect x="27" y="22" width="5" height="4" rx="0.5" fill="${accent}" opacity="0.3"/>
       <rect x="33" y="20" width="5" height="6" rx="0.5" fill="${accent}" opacity="0.45"/>
+    `;
+  } else if (cat === "Real Estate") {
+    inner = `
+      <polygon points="20,8 6,18 34,18" fill="${accent}" opacity="0.8"/>
+      <rect x="9" y="18" width="22" height="12" fill="${accent}" opacity="0.3"/>
+      <rect x="12" y="20" width="4" height="4" rx="0.5" fill="white" opacity="0.7"/>
+      <rect x="24" y="20" width="4" height="4" rx="0.5" fill="white" opacity="0.7"/>
+      <rect x="18" y="23" width="4" height="7" rx="0.5" fill="${accent}" opacity="0.9"/>
+      <rect x="3" y="28" width="34" height="2" rx="1" fill="white" opacity="0.15"/>
     `;
   } else {
     // Agency
